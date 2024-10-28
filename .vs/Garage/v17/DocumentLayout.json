@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Garage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|E:\\Garage\\garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\analistic.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\analistic.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\billing.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\billing.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\stocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\stocks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|E:\\Garage\\garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|E:\\Garage\\garage\\analistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\analistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\analistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\analistic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\billingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\billingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|e:\\garage\\garage\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 293,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Program.cs",
+              "RelativeDocumentMoniker": "Garage\\Program.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Program.cs",
+              "RelativeToolTip": "Garage\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:48:08.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Billing.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Billing.cs",
+              "RelativeDocumentMoniker": "Garage\\Billing.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Billing.cs [Design]",
+              "RelativeToolTip": "Garage\\Billing.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T07:32:03.437Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Billing.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Billing.cs",
+              "RelativeDocumentMoniker": "Garage\\Billing.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Billing.cs",
+              "RelativeToolTip": "Garage\\Billing.cs",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAIwPYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T08:38:36.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminLogin.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\AdminLogin.cs",
+              "RelativeDocumentMoniker": "Garage\\AdminLogin.cs",
+              "ToolTip": "E:\\Garage\\Garage\\AdminLogin.cs [Design]",
+              "RelativeToolTip": "Garage\\AdminLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:11:16.467Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Analistic.Designer.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Analistic.Designer.cs",
+              "RelativeDocumentMoniker": "Garage\\Analistic.Designer.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Analistic.Designer.cs",
+              "RelativeToolTip": "Garage\\Analistic.Designer.cs",
+              "ViewState": "AQIAAOcAAAAAAAAAAAAAAPcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T09:22:08.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Billing.Designer.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Billing.Designer.cs",
+              "RelativeDocumentMoniker": "Garage\\Billing.Designer.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Billing.Designer.cs",
+              "RelativeToolTip": "Garage\\Billing.Designer.cs",
+              "ViewState": "AQIAABQCAAAAAAAAAAAWwEICAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:33:58.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Login.cs",
+              "RelativeDocumentMoniker": "Garage\\Login.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Login.cs [Design]",
+              "RelativeToolTip": "Garage\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:33:10.46Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Login.cs",
+              "RelativeDocumentMoniker": "Garage\\Login.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Login.cs",
+              "RelativeToolTip": "Garage\\Login.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAmwEgAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:33:13.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Stocks.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Stocks.cs",
+              "RelativeDocumentMoniker": "Garage\\Stocks.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Stocks.cs [Design]",
+              "RelativeToolTip": "Garage\\Stocks.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:42:22.003Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Employee.cs",
+              "RelativeDocumentMoniker": "Garage\\Employee.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Employee.cs",
+              "RelativeToolTip": "Garage\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:36:51.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Employees.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Employees.cs",
+              "RelativeDocumentMoniker": "Garage\\Employees.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Employees.cs [Design]",
+              "RelativeToolTip": "Garage\\Employees.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:42:12.963Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Analistic.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Analistic.cs",
+              "RelativeDocumentMoniker": "Garage\\Analistic.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Analistic.cs",
+              "RelativeToolTip": "Garage\\Analistic.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAvwL0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T07:33:14.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Analistic.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Analistic.cs",
+              "RelativeDocumentMoniker": "Garage\\Analistic.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Analistic.cs [Design]",
+              "RelativeToolTip": "Garage\\Analistic.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T07:31:31.636Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cars.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Cars.cs",
+              "RelativeDocumentMoniker": "Garage\\Cars.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Cars.cs [Design]",
+              "RelativeToolTip": "Garage\\Cars.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T08:41:27.201Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Splash.cs [Design]",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Splash.cs",
+              "RelativeDocumentMoniker": "Garage\\Splash.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Splash.cs [Design]",
+              "RelativeToolTip": "Garage\\Splash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:33:42.314Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Splash.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Splash.cs",
+              "RelativeDocumentMoniker": "Garage\\Splash.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Splash.cs",
+              "RelativeToolTip": "Garage\\Splash.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAtwCIAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:33:44.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BillingData.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\BillingData.cs",
+              "RelativeDocumentMoniker": "Garage\\BillingData.cs",
+              "ToolTip": "E:\\Garage\\Garage\\BillingData.cs",
+              "RelativeToolTip": "Garage\\BillingData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:36:18.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Cars.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Cars.cs",
+              "RelativeDocumentMoniker": "Garage\\Cars.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Cars.cs",
+              "RelativeToolTip": "Garage\\Cars.cs",
+              "ViewState": "AQIAADsBAAAAAAAAAIA3wFIBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:09:13.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminLogin.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\AdminLogin.cs",
+              "RelativeDocumentMoniker": "Garage\\AdminLogin.cs",
+              "ToolTip": "E:\\Garage\\Garage\\AdminLogin.cs",
+              "RelativeToolTip": "Garage\\AdminLogin.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAtwCcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T12:11:18.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Car.cs",
+              "DocumentMoniker": "E:\\Garage\\Garage\\Car.cs",
+              "RelativeDocumentMoniker": "Garage\\Car.cs",
+              "ToolTip": "E:\\Garage\\Garage\\Car.cs",
+              "RelativeToolTip": "Garage\\Car.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T09:23:51.411Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 310,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

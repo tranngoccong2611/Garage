@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "o1T1FzhGKVg=",
+  "success": true,
+  "projectFilePath": "E:\\Garage\\Garage\\Garage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\trann\\.nuget\\packages\\system.net.http.json\\8.0.1\\system.net.http.json.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
