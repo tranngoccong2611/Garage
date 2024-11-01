@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath></BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\images.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />

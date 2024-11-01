@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Garage
 {
-    public partial class Form1 : Form
+    public partial class ForgetPassword : Form
     {
-        public Form1()
+        public ForgetPassword()
         {
             InitializeComponent();
         }
