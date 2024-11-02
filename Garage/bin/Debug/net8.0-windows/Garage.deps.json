@@ -14,14 +14,7 @@
           "Garage.dll": {}
         }
       },
-      "System.Net.Http.Json/8.0.1": {
-        "runtime": {
-          "lib/net8.0/System.Net.Http.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.1024.46610"
-          }
-        }
-      }
+      "System.Net.Http.Json/8.0.1": {}
     }
   },
   "libraries": {

@@ -46,7 +46,6 @@ E:\Garage\Garage\obj\Debug\net8.0-windows\Garage.Analistic.resources
 E:\Garage\Garage\obj\Debug\net8.0-windows\Garage.Splash.resources
 E:\Garage\Garage\obj\Debug\net8.0-windows\Garage.Login.resources
 E:\Garage\Garage\obj\Debug\net8.0-windows\Garage.AdminLogin.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.csproj.AssemblyReference.cache
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.AdminLogin.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Analistic.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Billing.resources
@@ -69,8 +68,6 @@ D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\Garage.deps.json
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\Garage.runtimeconfig.json
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\Garage.dll
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\Garage.pdb
-D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\System.Net.Http.Json.dll
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.csproj.Up2Date
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.dll
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\refint\Garage.dll
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.pdb
