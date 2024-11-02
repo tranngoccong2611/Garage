@@ -76,3 +76,4 @@ D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\refint\Garage.dll
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.pdb
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.genruntimeconfig.cache
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\ref\Garage.dll
+D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Dashboard.resources
