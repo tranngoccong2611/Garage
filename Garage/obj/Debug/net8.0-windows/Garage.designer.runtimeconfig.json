@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Lenovo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Lenovo\\.nuget\\packages",
-      "D:\\Visual Studio 2022\\NuGetPackages"
+      "C:\\Users\\Tan\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Tan\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.NullabilityInfoContext.IsSupported": true,

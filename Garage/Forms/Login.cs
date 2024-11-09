@@ -13,7 +13,7 @@ namespace Garage
     {
         private readonly GaraOtoDbContext _context;
         private readonly IServiceScopeFactory _scopeFactory;
-
+        private readonly RevenueCalculator _rewardCalculator;
         public Login(GaraOtoDbContext context, IServiceScopeFactory scopeFactory)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
@@ -47,7 +47,7 @@ namespace Garage
                     // Mở form mới
                     using (var scope = _scopeFactory.CreateScope())
                     {
-                        var dashBoard = scope.ServiceProvider.GetRequiredService<DashBoard>();
+                        var dashBoard = new DashBoard(_context,_scopeFactory,_rewardCalculator);
                         dashBoard.Show();
                     }
                 }

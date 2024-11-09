@@ -9,10 +9,11 @@ using Microsoft.EntityFrameworkCore;
 static class Program
 {
     public static IServiceProvider ServiceProvider { get; private set; }
-
+    
     [STAThread]
     static void Main()
     {
+
         var services = new ServiceCollection();
         var configuration = LoadConfiguration();
         ConfigureServices(services, configuration);
@@ -30,10 +31,11 @@ static class Program
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            var _context = new GaraOtoDbContext();
             // Resolve DashBoard from the service provider so it gets all dependencies
             var dashboard = scope.ServiceProvider.GetRequiredService<DashBoard>();
-            Application.Run(dashboard);
+            var login =scope.ServiceProvider.GetRequiredService<Login>();
+            Application.Run(login);
         }
     }
 
