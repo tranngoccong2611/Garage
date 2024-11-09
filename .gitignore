@@ -1,0 +1,77 @@
+# Binaries
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+*.designer.cs
+
+# Build results
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.hdr
+
+# Logs
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+*.orig
+*.log*
+
+# Visual Studio Code workspace and settings files
+.vscode/
+
+# Visual Studio files
+.vs/
+.vscode/
+.idea/
+_ReSharper*/
+
+# Configurations and dependency files
+packages/
+project.lock.json
+project.fragment.lock.json
+project.nuget.cache
+*.csproj.user
+
+# Local NuGet folder
+**/packages/*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# OS generated files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+*.swp
+*.sln.docstates
+*.sln.docstates.user
+~$*
+
+# Publish outputs
+publish/
+.publish/
+
+# Rider files
+.idea/
+
+# JetBrains Rider & Resharper
+.ReSharper*/
+
+# App settings
+appsettings.json
