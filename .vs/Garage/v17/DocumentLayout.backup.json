@@ -1,42 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Garage\\",
+  "WorkspaceRootPath": "D:\\btlWinform\\Garage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\billing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\common\\utils\\security\\passwordhashupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\common\\utils\\security\\passwordhashupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\dashboardcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\dashboardcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\cars.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\cars.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\revenuecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\revenuecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|c:\\users\\administrator\\source\\repos\\garage\\garage\\stock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\stock.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,121 +37,99 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 293,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Billing.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Billing.cs",
-              "RelativeDocumentMoniker": "Garage\\Billing.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Billing.cs [Design]*",
-              "RelativeToolTip": "Garage\\Billing.cs [Design]*",
+              "Title": "PasswordHashUpdater.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Common\\Utils\\Security\\PasswordHashUpdater.cs",
+              "RelativeDocumentMoniker": "Garage\\Common\\Utils\\Security\\PasswordHashUpdater.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Common\\Utils\\Security\\PasswordHashUpdater.cs",
+              "RelativeToolTip": "Garage\\Common\\Utils\\Security\\PasswordHashUpdater.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:14:05.672Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Employee.cs",
-              "RelativeDocumentMoniker": "Garage\\Employee.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Employee.cs",
-              "RelativeToolTip": "Garage\\Employee.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwBEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:09:23.535Z",
+              "WhenOpened": "2024-11-09T07:56:19.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Employee.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Employee.cs",
-              "RelativeDocumentMoniker": "Garage\\Employee.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Employee.cs [Design]",
-              "RelativeToolTip": "Garage\\Employee.cs [Design]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Program.cs",
+              "RelativeDocumentMoniker": "Garage\\Program.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Program.cs",
+              "RelativeToolTip": "Garage\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:05:20.238Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-09T07:36:44.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Cars.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.cs",
-              "RelativeDocumentMoniker": "Garage\\Cars.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.cs",
-              "RelativeToolTip": "Garage\\Cars.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBEAAAAJAAAAAAAAAA==",
+              "Title": "DashboardControl.Designer.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.Designer.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.Designer.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.Designer.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T08:52:41.524Z",
+              "WhenOpened": "2024-11-09T07:17:07.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Cars.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.Designer.cs",
-              "RelativeDocumentMoniker": "Garage\\Cars.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.Designer.cs",
-              "RelativeToolTip": "Garage\\Cars.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DashboardControl.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\DashboardControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T08:49:20.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cars.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.cs",
-              "RelativeDocumentMoniker": "Garage\\Cars.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Cars.cs [Design]",
-              "RelativeToolTip": "Garage\\Cars.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T08:49:26.418Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.cs",
-              "RelativeDocumentMoniker": "Garage\\Stock.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.cs",
-              "RelativeToolTip": "Garage\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:48:55.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Stock.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.Designer.cs",
-              "RelativeDocumentMoniker": "Garage\\Stock.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.Designer.cs",
-              "RelativeToolTip": "Garage\\Stock.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:48:49.847Z",
+              "WhenOpened": "2024-11-09T07:17:04.33Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Stock.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.cs",
-              "RelativeDocumentMoniker": "Garage\\Stock.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Garage\\Garage\\Stock.cs [Design]",
-              "RelativeToolTip": "Garage\\Stock.cs [Design]",
+              "Title": "DashBoard.Designer.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.Designer.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\DashBoard.Designer.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.Designer.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\DashBoard.Designer.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowFcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:46:25.192Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-07T14:34:14.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashBoard.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\DashBoard.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\DashBoard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwGgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:13:28.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RevenueCalculator.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\RevenueCalculator.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\RevenueCalculator.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\RevenueCalculator.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\RevenueCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T10:55:36.71Z",
+              "EditorCaption": ""
             }
           ]
         }

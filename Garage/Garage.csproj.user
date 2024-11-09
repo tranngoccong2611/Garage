@@ -22,11 +22,26 @@
     <Compile Update="Forms\MainForm\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\BookingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\CustomersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\RepairTrackerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\MainForm\Dictionary\StaffManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Forms\MainForm\EmployeeManagementForm.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\MainForm\InventoryControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\MainForm\SparePartsForm.cs">
       <SubType>Form</SubType>
