@@ -18,9 +18,12 @@ namespace Garage.Forms.MainForm.Dictionary
      
         private GaraOtoDbContext _contextOptions;
 
-        public DashboardControl(RevenueCalculator _revenueCalcualtor,GaraOtoDbContext context)
+
+        public DashboardControl(RevenueCalculator revenueCalculator, GaraOtoDbContext context)
         {
-         
+            _revenueCalculator = revenueCalculator ?? throw new ArgumentNullException(nameof(revenueCalculator));
+            _contextOptions=context ?? throw new ArgumentNullException(nameof(_contextOptions));
+
             InitializeComponent();
         }
 

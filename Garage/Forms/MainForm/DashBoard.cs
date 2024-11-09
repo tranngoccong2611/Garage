@@ -12,10 +12,10 @@ namespace Garage.Forms.MainForm
         private readonly GaraOtoDbContext _contextOptions;
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly RevenueCalculator _revenueCalculator;
-        private FlowLayoutPanel quickActionsPanel;
       
-        private System.Windows.Forms.Timer refreshTimer;
-        private bool refreshing = false;
+      
+
+      
 
         public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator)
         {
@@ -62,47 +62,14 @@ namespace Garage.Forms.MainForm
             return total;
         }
 
-        // Sửa lại phương thức OpenEmployeeForm
-        private void OpenEmployeeForm(object sender, EventArgs e)
-        {
-            // Sử dụng _contextOptions hoặc tạo scope mới
-            using (var scope = _scopeFactory.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<GaraOtoDbContext>();
-                var form = new EmployeeManagementForm(context);
-                form.Show();
-            }
-        }
+      
        
         private void Logout(object? sender, EventArgs e)
         {
             this.Hide();
         }
 
-        private void OpenCustomerCareForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenMaintenanceOrderTrackingForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenSparePartsForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenMaintenanceScheduleForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenCustomerForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+      
       
    
     }

@@ -35,7 +35,7 @@ static class Program
             // Resolve DashBoard from the service provider so it gets all dependencies
             var dashboard = scope.ServiceProvider.GetRequiredService<DashBoard>();
             var login =scope.ServiceProvider.GetRequiredService<Login>();
-            Application.Run(login);
+            Application.Run(dashboard);
         }
     }
 
