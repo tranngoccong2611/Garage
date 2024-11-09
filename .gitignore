@@ -74,4 +74,6 @@ publish/
 .ReSharper*/
 
 # App settings
+# Ignore appsettings
 appsettings.json
+appsettings.*.json
