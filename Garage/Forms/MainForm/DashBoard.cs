@@ -12,17 +12,17 @@ namespace Garage.Forms.MainForm
         private readonly GaraOtoDbContext _contextOptions;
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly RevenueCalculator _revenueCalculator;
-      
-      
-
+      private readonly TransactionInventory _transactionInventory;
       
 
-        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator)
+      
+
+        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator,TransactionInventory inventory)
         {
             _contextOptions = context ?? throw new ArgumentNullException(nameof(context));
             _scopeFactory = scope ?? throw new ArgumentNullException(nameof(scope));
             _revenueCalculator = new RevenueCalculator(context);
-
+            _transactionInventory = inventory;
             InitializeComponent();
             SetupLayout();
             this.MinimumSize = new Size(800, 600);

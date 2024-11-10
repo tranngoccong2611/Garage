@@ -37,7 +37,7 @@ static class Program
             var login =scope.ServiceProvider.GetRequiredService<Login>();
             // cái này tạo form tên là yournameform
             //Application.Run(yourNameFOrm());
-            Application.Run(login);
+            Application.Run(dashboard);
         }
     }
 
@@ -53,6 +53,7 @@ static class Program
 
         // Register other services
         services.AddScoped<PasswordHashUpdater>();
+        services.AddScoped<TransactionInventory>();
         services.AddScoped<RevenueCalculator>(); // Register RevenueCalculator as well
     }
 

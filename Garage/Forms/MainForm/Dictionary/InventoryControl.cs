@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garage.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace Garage.Forms.MainForm
 {
     public partial class InventoryControl : UserControl
     {
-        public InventoryControl()
+        private readonly GaraOtoDbContext _db;
+        
+        public InventoryControl(GaraOtoDbContext context, TransactionInventory inventory)
         {
+            _db = context;
+            _inventory = inventory;
             InitializeComponent();
+            
         }
+
+      
+
+    
     }
 }

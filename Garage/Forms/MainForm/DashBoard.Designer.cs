@@ -26,7 +26,7 @@ namespace Garage.Forms.MainForm
      
         private Panel dropdownPanel;
         private Label dropdownLabel;
-        
+
       
 
         protected override void Dispose(bool disposing)
@@ -104,10 +104,11 @@ namespace Garage.Forms.MainForm
             };
 
             // Khởi tạo DashboardControl và thiết lập nó để chiếm toàn bộ diện tích
-            DashboardControl dashboardControl = new DashboardControl(_revenueCalculator, _contextOptions);
+            //DashboardControl dashboardControl = new DashboardControl(_revenueCalculator, _contextOptions);
+            InventoryControl inven = new InventoryControl(_contextOptions,_transactionInventory);
             // Đảm bảo dashboardControl fill toàn bộ mainContentPanel
-            mainContentPanel.Controls.Add(dashboardControl);   
-           dashboardControl.Dock = DockStyle.Fill;
+            mainContentPanel.Controls.Add(inven);   
+           inven.Dock = DockStyle.Fill;
             // Thêm mainContentPanel vào Controls của form để nó hiển thị
             Controls.Add(mainContentPanel);
         }
@@ -228,7 +229,7 @@ namespace Garage.Forms.MainForm
                     DisplayControl(new DashboardControl(_revenueCalculator,_contextOptions));
                     break;
                 case "Inventory":
-                    DisplayControl(new InventoryControl());
+                    DisplayControl(new InventoryControl(_contextOptions,_transactionInventory));
                     break;
                 case "Repair Tracker":
                     DisplayControl(new RepairTrackerControl());
@@ -253,7 +254,10 @@ namespace Garage.Forms.MainForm
         {
             mainContentPanel.Controls.Clear();
             control.Dock = DockStyle.Fill;
-            control.BackColor = Color.Red;
+            AutoSize = true;
+            AutoScroll = true;
+            Width = SystemInformation.WorkingArea.Width - 200;
+            Height = Height;
             mainContentPanel.Controls.Add(control);
         }
 
