@@ -5,15 +5,15 @@ using Garage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Garage.Forms;
 
 static class Program
 {
     public static IServiceProvider ServiceProvider { get; private set; }
-    
+
     [STAThread]
     static void Main()
     {
-
         var services = new ServiceCollection();
         var configuration = LoadConfiguration();
         ConfigureServices(services, configuration);
@@ -29,6 +29,7 @@ static class Program
             var passwordUpdater = scope.ServiceProvider.GetRequiredService<PasswordHashUpdater>();
             passwordUpdater.UpdatePasswordHashes();
 
+            // Set this before any forms are created
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var _context = new GaraOtoDbContext();
@@ -37,9 +38,10 @@ static class Program
             var login =scope.ServiceProvider.GetRequiredService<Login>();
             // cái này tạo form tên là yournameform
             //Application.Run(yourNameFOrm());
-            Application.Run(dashboard);
+            Application.Run(login);
         }
     }
+
 
     private static void ConfigureServices(ServiceCollection services, IConfiguration configuration)
     {
@@ -50,6 +52,7 @@ static class Program
         // Register Forms
         services.AddTransient<Login>();
         services.AddTransient<DashBoard>();
+        services.AddTransient<AddNhanVien>();
 
         // Register other services
         services.AddScoped<PasswordHashUpdater>();
