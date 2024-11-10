@@ -12,17 +12,17 @@ namespace Garage.Forms.MainForm
         private readonly GaraOtoDbContext _contextOptions;
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly RevenueCalculator _revenueCalculator;
-        private FlowLayoutPanel quickActionsPanel;
+      private readonly TransactionInventory _transactionInventory;
       
-        private System.Windows.Forms.Timer refreshTimer;
-        private bool refreshing = false;
 
-        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator)
+      
+
+        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator,TransactionInventory inventory)
         {
             _contextOptions = context ?? throw new ArgumentNullException(nameof(context));
             _scopeFactory = scope ?? throw new ArgumentNullException(nameof(scope));
             _revenueCalculator = new RevenueCalculator(context);
-
+            _transactionInventory = inventory;
             InitializeComponent();
             SetupLayout();
             this.MinimumSize = new Size(800, 600);
@@ -62,38 +62,19 @@ namespace Garage.Forms.MainForm
             return total;
         }
 
+<<<<<<< HEAD
         // Sửa lại phương thức OpenEmployeeForm
   
+=======
+      
+>>>>>>> b37bd4c2b01e1cd46d5816cf70437595a4b54121
        
         private void Logout(object? sender, EventArgs e)
         {
             this.Hide();
         }
 
-        private void OpenCustomerCareForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenMaintenanceOrderTrackingForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenSparePartsForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenMaintenanceScheduleForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OpenCustomerForm(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+      
       
    
     }

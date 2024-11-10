@@ -1,15 +1,7 @@
 ﻿using Garage.Data;
 using Garage.Data.Models;
 using Microsoft.EntityFrameworkCore;
-public class RevenueInfo
-{
-    public decimal NowRevenueMonth { get; set; }
-    public decimal Tile { get; set; }
-    public decimal TinhDoanhThuLinhKienTheoThangNam { get; set; }
-    public decimal TinhDoanhThuDichVuTheoThangNam { get; set; }
-    public decimal SoDonDatLichBaoDuong { get; set; }
-    public List<ListChartServices> TotalRevenueRevenueList { get; set; }
-}
+
 
 public class UserWithOrder
 {

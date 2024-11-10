@@ -106,7 +106,7 @@ namespace Garage
         private Label label1;
         private TextBox PasswordTbl;
         private TextBox UsernameTbl;
-        private Label label2;
+    
         private Button UserSign;
         
         private Label AdminLog;

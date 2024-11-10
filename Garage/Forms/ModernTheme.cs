@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace Garage.Forms
 {
     public static class ModernTheme
@@ -35,6 +36,7 @@ namespace Garage.Forms
             button.Font = BodyFont;
             button.Padding = new Padding(15, 8, 15, 8);
             button.Cursor = Cursors.Hand;
+            
 
             button.MouseEnter += (s, e) => button.BackColor = Secondary;
             button.MouseLeave += (s, e) => button.BackColor = Primary;
@@ -44,7 +46,7 @@ namespace Garage.Forms
         public static void ApplyDataGridViewStyle(DataGridView dgv)
         {
             dgv.BackgroundColor = CardBackground;
-            dgv.BorderStyle = BorderStyle.None;
+            dgv.BorderStyle = BorderStyle.FixedSingle;
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgv.EnableHeadersVisualStyles = false;
@@ -69,15 +71,31 @@ namespace Garage.Forms
     {
         public ModernButton()
         {
+            // Set FlatStyle to Flat, removing 3D effects for a modern look
             FlatStyle = FlatStyle.Flat;
-            FlatAppearance.BorderSize = 0;
+
+            // Set the border size to 1 pixel
+            FlatAppearance.BorderSize = 1;
+
+            // Set the border style to FixedSingle, making the border a solid line
+            FlatAppearance.BorderColor = Color.Red;
+            // Set the background color to the primary color of the ModernTheme (likely a predefined color)
             BackColor = ModernTheme.Primary;
+
+            // Set the text color (foreground) to a light color from the ModernTheme (likely white or light gray)
             ForeColor = ModernTheme.TextLight;
+
+            // Set the font of the button to the body font from the ModernTheme (likely a clean, sans-serif font)
             Font = ModernTheme.BodyFont;
+
+            // Set the size of the button to predefined width and height in ModernTheme (likely consistent button sizes)
             Size = new Size(ModernTheme.StandardButtonWidth, ModernTheme.StandardButtonHeight);
+
+            // Set the cursor to a hand pointer when hovering over the button
             Cursor = Cursors.Hand;
         }
     }
+
 
     // Custom TextBox
     public class ModernTextBox : TextBox

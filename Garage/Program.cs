@@ -31,12 +31,14 @@ static class Program
 
             // Set this before any forms are created
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);  // Set this first
-
-            // Now create and run the AddNhanVien form
-            bool isUpdate = true; // or false based on your logic
-            var addNhanVienForm = new AddNhanVien(isUpdate);  // Create AddNhanVien form with isUpdate parameter
-            Application.Run(addNhanVienForm);  // Start the form
+            Application.SetCompatibleTextRenderingDefault(false);
+            var _context = new GaraOtoDbContext();
+            // Resolve DashBoard from the service provider so it gets all dependencies
+            var dashboard = scope.ServiceProvider.GetRequiredService<DashBoard>();
+            var login =scope.ServiceProvider.GetRequiredService<Login>();
+            // cái này tạo form tên là yournameform
+            //Application.Run(yourNameFOrm());
+            Application.Run(login);
         }
     }
 
@@ -54,6 +56,7 @@ static class Program
 
         // Register other services
         services.AddScoped<PasswordHashUpdater>();
+        services.AddScoped<TransactionInventory>();
         services.AddScoped<RevenueCalculator>(); // Register RevenueCalculator as well
     }
 
