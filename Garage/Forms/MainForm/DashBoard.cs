@@ -63,16 +63,7 @@ namespace Garage.Forms.MainForm
         }
 
         // Sửa lại phương thức OpenEmployeeForm
-        private void OpenEmployeeForm(object sender, EventArgs e)
-        {
-            // Sử dụng _contextOptions hoặc tạo scope mới
-            using (var scope = _scopeFactory.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<GaraOtoDbContext>();
-                var form = new EmployeeManagementForm(context);
-                form.Show();
-            }
-        }
+  
        
         private void Logout(object? sender, EventArgs e)
         {

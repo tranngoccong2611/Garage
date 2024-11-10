@@ -151,12 +151,7 @@ D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.csproj.AssemblyRefer
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.g.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.AddForm.AddCustomerForm.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Login.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.CustomerCareForm.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.CustomerForm.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.DashBoard.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.EmployeeManagementForm.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.SquarePartsForm.resources
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.VehicleManagementForm.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Properties.Resources.resources
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.csproj.GenerateResource.cache
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.GeneratedMSBuildEditorConfig.editorconfig
@@ -171,7 +166,6 @@ D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.pdb
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.genruntimeconfig.cache
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\Garage.pdb
 D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\ref\Garage.dll
-D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.MainForm.InventoryControl.resources
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\System.ClientModel.dll
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
@@ -186,3 +180,5 @@ D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlC
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
 D:\btlWinform\Garage\Garage\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.AddNhanVien.resources
+D:\btlWinform\Garage\Garage\obj\Debug\net8.0-windows\Garage.Forms.AddLinhKien.resources

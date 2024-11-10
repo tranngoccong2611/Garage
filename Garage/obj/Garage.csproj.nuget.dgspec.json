@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\btlwinform\\Garage\\Garage\\Garage.csproj": {}
+    "D:\\btlWinform\\Garage\\Garage\\Garage.csproj": {}
   },
   "projects": {
-    "D:\\btlwinform\\Garage\\Garage\\Garage.csproj": {
+    "D:\\btlWinform\\Garage\\Garage\\Garage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\btlwinform\\Garage\\Garage\\Garage.csproj",
+        "projectUniqueName": "D:\\btlWinform\\Garage\\Garage\\Garage.csproj",
         "projectName": "Garage",
-        "projectPath": "D:\\btlwinform\\Garage\\Garage\\Garage.csproj",
+        "projectPath": "D:\\btlWinform\\Garage\\Garage\\Garage.csproj",
         "packagesPath": "C:\\Users\\Tan\\.nuget\\packages\\",
         "outputPath": "D:\\btlWinform\\Garage\\Garage\\obj\\",
         "projectStyle": "PackageReference",

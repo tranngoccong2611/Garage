@@ -5,15 +5,15 @@ using Garage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Garage.Forms;
 
 static class Program
 {
     public static IServiceProvider ServiceProvider { get; private set; }
-    
+
     [STAThread]
     static void Main()
     {
-
         var services = new ServiceCollection();
         var configuration = LoadConfiguration();
         ConfigureServices(services, configuration);
@@ -29,17 +29,17 @@ static class Program
             var passwordUpdater = scope.ServiceProvider.GetRequiredService<PasswordHashUpdater>();
             passwordUpdater.UpdatePasswordHashes();
 
+            // Set this before any forms are created
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            var _context = new GaraOtoDbContext();
-            // Resolve DashBoard from the service provider so it gets all dependencies
-            var dashboard = scope.ServiceProvider.GetRequiredService<DashBoard>();
-            var login =scope.ServiceProvider.GetRequiredService<Login>();
-            // cái này tạo form tên là yournameform
-            //Application.Run(yourNameFOrm());
-            Application.Run(login);
+            Application.SetCompatibleTextRenderingDefault(false);  // Set this first
+
+            // Now create and run the AddNhanVien form
+            bool isUpdate = true; // or false based on your logic
+            var addNhanVienForm = new AddNhanVien(isUpdate);  // Create AddNhanVien form with isUpdate parameter
+            Application.Run(addNhanVienForm);  // Start the form
         }
     }
+
 
     private static void ConfigureServices(ServiceCollection services, IConfiguration configuration)
     {
@@ -50,6 +50,7 @@ static class Program
         // Register Forms
         services.AddTransient<Login>();
         services.AddTransient<DashBoard>();
+        services.AddTransient<AddNhanVien>();
 
         // Register other services
         services.AddScoped<PasswordHashUpdater>();

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
+
 namespace Garage.Forms.AddForm
 {
     public partial class AddCustomerForm : Form
@@ -16,19 +17,32 @@ namespace Garage.Forms.AddForm
         private ComboBox cmbGioiTinh, cmbChucVu;
         private DateTimePicker dtpNgaySinh;
         private Button btnSave;
-
-        public AddCustomerForm(GaraOtoDbContext context)
+        private NguoiDung user;
+        private int _idUser;
+        private bool isUpdate;
+        public AddCustomerForm(GaraOtoDbContext context, int? idNguoiDung)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             InitializeFormComponents();
+            isUpdate = idNguoiDung != null;
+            _idUser = idNguoiDung ?? 0;
+
         }
+
+        public NguoiDung getUser(int? id)
+        {
+            var user = _context.NguoiDung.FirstOrDefault(u => u.NguoiDungID == id);
+            return user;
+        }
+
 
         private void InitializeFormComponents()
         {
-            this.Text = "Thêm Nhân Viên";
+            this.Text = isUpdate ? "Cập nhập người dùng" : "Thêm người dùng mới";
             this.Size = new Size(400, 600);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            user = getUser(_idUser);
 
             AddFormLabelsAndFields();
             AddSaveButton();
@@ -38,7 +52,7 @@ namespace Garage.Forms.AddForm
         {
             var lblHoTen = CreateLabel("Họ Tên:", new Point(20, 20));
             txtHoTen = CreateTextBox("txtHoTen", new Point(150, 20), 200);
-
+            lblHoTen.Text = isUpdate ? user.HoTen : "";
             var lblGioiTinh = CreateLabel("Giới Tính:", new Point(20, 60));
             cmbGioiTinh = CreateComboBox("cmbGioiTinh", new Point(150, 60), 200);
             cmbGioiTinh.DataSource = _context.GioiTinh.ToList();
@@ -98,6 +112,11 @@ namespace Garage.Forms.AddForm
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            if (isUpdate)
+            {
+                // chạy câu lệnh cập nhập dữ liệu 
+            }
+            // chạy câu lưu thêm người dùng và lưu cơ sở dữ liệu
             if (ValidateForm())
             {
                 try
@@ -124,6 +143,20 @@ namespace Garage.Forms.AddForm
                     MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}");
                 }
             }
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // AddCustomerForm
+            // 
+            ClientSize = new Size(887, 573);
+            Name = "AddCustomerForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "AddCustomerForm";
+            Load += AddCustomerForm_Load;
+            ResumeLayout(false);
         }
 
         private bool ValidateForm()
@@ -159,6 +192,11 @@ namespace Garage.Forms.AddForm
             }
 
             return true;
+        }
+
+        private void AddCustomerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
