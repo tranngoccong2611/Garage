@@ -62,12 +62,6 @@ namespace Garage.Forms.MainForm
             return total;
         }
 
-<<<<<<< HEAD
-        // Sửa lại phương thức OpenEmployeeForm
-  
-=======
-      
->>>>>>> b37bd4c2b01e1cd46d5816cf70437595a4b54121
        
         private void Logout(object? sender, EventArgs e)
         {

@@ -47,4 +47,9 @@
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <SubType>Form</SubType>
+    </None>
+  </ItemGroup>
 </Project>

@@ -9,17 +9,17 @@ namespace Garage.Forms
 {
     public partial class AddNhanVien : Form
     {
-        private bool isUpdate;
-        private NhanVien existingNhanVien;
+        private bool isUpdate=false;
+        private int _existingNhanVienID;
         private GaraOtoDbContext _context;
-
+        private NhanVien user;
         // Constructor nhận các tham số từ DI
-        public AddNhanVien(bool isUpdate, NhanVien existingNhanVien = null)
+        public AddNhanVien(GaraOtoDbContext  context, int existingNhanVienId=0)
         {
             InitializeComponent();
-            _context = new GaraOtoDbContext();
+            _context = context;
             this.isUpdate = isUpdate;
-            this.existingNhanVien = existingNhanVien;
+            _existingNhanVienID = existingNhanVienId ;
 
             // Cấu hình các ComboBox và các điều khiển khác
             cmbGioiTinh.Items.Add(new { Text = "Nam", Value = 1 });
@@ -31,36 +31,50 @@ namespace Garage.Forms
             cmbChucVu.Items.Add(new { Text = "Quản lý", Value = 2 });
             cmbChucVu.DisplayMember = "Text";
             cmbChucVu.ValueMember = "Value";
-
-            if (isUpdate && existingNhanVien != null)
+            if (existingNhanVienId != 0)
             {
+                isUpdate = true;
+            }
+            if (isUpdate )
+            {
+                 user = _context.NhanVien.Where(u => u.NhanVienID == existingNhanVienId).FirstOrDefault();
+                if (user == null)
+                {
+                    MessageBox.Show("Không tìm thấy nhân viên cần cập nhật.");
+                    return;
+                }
                 // Cập nhật dữ liệu nhân viên nếu là chế độ cập nhật
                 this.Text = "Cập nhật thông tin nhân viên";
                 // Đổ dữ liệu của nhân viên vào các TextBox
-                txtHoTen.Text = existingNhanVien.HoTen;
-                txtEmail.Text = existingNhanVien.Email;
-                txtSoDienThoai.Text = existingNhanVien.SoDienThoai;
-                txtDiaChi.Text = existingNhanVien.DiaChi;
+                txtNhanVienID.Text = user.NhanVienID.ToString();
+                txtHoTen.Text = user.HoTen;
+                txtEmail.Text = user.Email;
+                txtSoDienThoai.Text = user.SoDienThoai;
+                txtDiaChi.Text = user.DiaChi;
 
-                if (existingNhanVien.NgaySinh.HasValue)
+                if (user.NgaySinh.HasValue)
                 {
-                    dtpNgaySinh.Value = existingNhanVien.NgaySinh.Value;
+                    dtpNgaySinh.Value = user.NgaySinh.Value.Date;
                 }
 
-                if (!string.IsNullOrEmpty(existingNhanVien.HinhAnh))
+                if (!string.IsNullOrEmpty(user.HinhAnh) && System.IO.File.Exists(user.HinhAnh))
                 {
-                    pictureBoxHinhAnh.Image = Image.FromFile(existingNhanVien.HinhAnh);
+                    pictureBoxHinhAnh.Image = Image.FromFile(user.HinhAnh);
+                }
+                else
+                {
+                    pictureBoxHinhAnh.Image = Properties.Resources.logo; // Ảnh mặc định từ tài nguyên
                 }
 
-                cmbGioiTinh.SelectedValue = existingNhanVien.GioiTinhID;
-                cmbChucVu.SelectedValue = existingNhanVien.ChucVuID;
+                cmbGioiTinh.SelectedIndex = 0; // Chọn giá trị đầu tiên mặc định
+                cmbChucVu.SelectedIndex = 0;   // Chọn giá trị đầu tiên mặc định
+
             }
             else
             {
                 this.Text = "Thêm nhân viên mới";
             }
         }
-        // Mở hộp thoại để chọn ảnh
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -70,10 +84,36 @@ namespace Garage.Forms
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBoxHinhAnh.Image = Image.FromFile(openFileDialog.FileName);
+                    // Lấy đường dẫn của hình ảnh được chọn
+                    string imagePath = openFileDialog.FileName;
+
+                    // Đường dẫn thư mục Images trong Resources
+                    string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Images");
+
+                    // Kiểm tra nếu thư mục chưa tồn tại thì tạo mới
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+
+                    // Lấy tên tệp hình ảnh (tên file, không bao gồm đường dẫn)
+                    string fileName = Path.GetFileName(imagePath);
+
+                    // Tạo đường dẫn mới để lưu hình ảnh
+                    string newFilePath = Path.Combine(directoryPath, fileName);
+
+                    // Sao chép hình ảnh vào thư mục mới
+                    File.Copy(imagePath, newFilePath, true);
+
+                    // Hiển thị hình ảnh lên PictureBox
+                    pictureBoxHinhAnh.Image = Image.FromFile(newFilePath);
+
+                    // Lưu đường dẫn vào cơ sở dữ liệu (Ví dụ: lưu đường dẫn vào thuộc tính HinhAnh của NhanVien)
+                    user.HinhAnh = $"Resources/Images/{fileName}"; // Lưu đường dẫn tương đối vào cơ sở dữ liệu
                 }
             }
         }
+
 
         // Lưu thông tin nhân viên khi người dùng nhấn "Lưu"
         private void btnLuu_Click(object sender, EventArgs e)
@@ -82,18 +122,18 @@ namespace Garage.Forms
             {
                 if (ValidateForm())
                 {
-                    string hinhAnhPath = pictureBoxHinhAnh.Image != null ? pictureBoxHinhAnh.ImageLocation : null;
+                    string hinhAnhPath = pictureBoxHinhAnh.Image != null ? user.HinhAnh : "default.jpg";
 
-                    if (isUpdate && existingNhanVien != null)
+                    if (isUpdate)
                     {
-                        existingNhanVien.HoTen = txtHoTen.Text;
-                        existingNhanVien.Email = txtEmail.Text;
-                        existingNhanVien.SoDienThoai = txtSoDienThoai.Text;
-                        existingNhanVien.DiaChi = txtDiaChi.Text;
-                        existingNhanVien.NgaySinh = dtpNgaySinh.Value;
-                        existingNhanVien.GioiTinhID = (int)cmbGioiTinh.SelectedValue;
-                        existingNhanVien.ChucVuID = (int)cmbChucVu.SelectedValue;
-                        existingNhanVien.HinhAnh = hinhAnhPath;
+                        user.HoTen = txtHoTen.Text;
+                        user.Email = txtEmail.Text;
+                        user.SoDienThoai = txtSoDienThoai.Text;
+                        user.DiaChi = txtDiaChi.Text;
+                        user.NgaySinh = dtpNgaySinh.Value;
+                        user.GioiTinhID = (int)cmbGioiTinh.SelectedValue;
+                        user.ChucVuID = (int)cmbChucVu.SelectedValue;
+                        user.HinhAnh = hinhAnhPath;
 
                         _context.SaveChanges();
                         MessageBox.Show("Cập nhật nhân viên thành công!");
@@ -115,6 +155,7 @@ namespace Garage.Forms
                         _context.NhanVien.Add(newNhanVien);
                         _context.SaveChanges();
                         MessageBox.Show("Thêm nhân viên mới thành công!");
+
                     }
 
                     this.Close();
@@ -125,6 +166,7 @@ namespace Garage.Forms
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}");
             }
         }
+
 
         // Kiểm tra tính hợp lệ của các trường trong form
         private bool ValidateForm()
