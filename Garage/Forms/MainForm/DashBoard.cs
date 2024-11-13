@@ -60,8 +60,7 @@ namespace Garage.Forms.MainForm
                 .Sum(x => x.SoTien);
 
             return total;
-        }
-       
+        } 
         private void Logout(object? sender, EventArgs e)
         {
             this.Hide();

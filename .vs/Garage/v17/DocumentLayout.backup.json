@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "D:\\btlWinform\\Garage\\",
   "Documents": [
     {
+<<<<<<< HEAD
+=======
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\addnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\addnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\addlinhkien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\addlinhkien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\addnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\addnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\addlinhkien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\addlinhkien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+>>>>>>> 380a15234eef60054e9bb8e882da3a90f39134ea
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\garage.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\garage.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +53,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\bookingscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\bookingscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 380a15234eef60054e9bb8e882da3a90f39134ea
     }
   ],
   "DocumentGroupContainers": [
@@ -33,8 +69,13 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
+=======
+          "DockedWidth": 293,
+          "SelectedChildIndex": 2,
+>>>>>>> 380a15234eef60054e9bb8e882da3a90f39134ea
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +111,110 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 0,
+=======
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Program.cs",
+              "RelativeDocumentMoniker": "Garage\\Program.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Program.cs",
+              "RelativeToolTip": "Garage\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T00:54:02.903Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddLinhKien.cs [Design]",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddLinhKien.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\AddLinhKien.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddLinhKien.cs [Design]",
+              "RelativeToolTip": "Garage\\Forms\\AddLinhKien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:50:00.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddNhanVien.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddNhanVien.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\AddNhanVien.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddNhanVien.cs",
+              "RelativeToolTip": "Garage\\Forms\\AddNhanVien.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAYwFwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T03:44:10.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AddLinhKien.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddLinhKien.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\AddLinhKien.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddLinhKien.cs",
+              "RelativeToolTip": "Garage\\Forms\\AddLinhKien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:19:45.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddNhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddNhanVien.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\AddNhanVien.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\AddNhanVien.cs [Design]",
+              "RelativeToolTip": "Garage\\Forms\\AddNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T02:18:46.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingsControl.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:34:14.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+>>>>>>> 380a15234eef60054e9bb8e882da3a90f39134ea
+              "Title": "DashBoard.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\DashBoard.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\DashBoard.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\DashBoard.cs",
+<<<<<<< HEAD
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T15:33:21.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Garage",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Garage.csproj",
+              "RelativeDocumentMoniker": "Garage\\Garage.csproj",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Garage.csproj",
+              "RelativeToolTip": "Garage\\Garage.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-13T15:33:18.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "InventoryControl.cs [Design]",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
@@ -81,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\appsettings.json",
               "RelativeDocumentMoniker": "Garage\\appsettings.json",
@@ -93,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -105,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "InventoryControl.Designer.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
@@ -118,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "InventoryControl.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
@@ -130,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TransactionInventory.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\formatData\\TransactionInventory.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\formatData\\TransactionInventory.cs",
@@ -157,6 +301,21 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+=======
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T18:33:44.771Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 310,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+>>>>>>> 380a15234eef60054e9bb8e882da3a90f39134ea
             }
           ]
         }
