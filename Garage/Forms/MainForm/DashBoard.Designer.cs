@@ -27,7 +27,7 @@ namespace Garage.Forms.MainForm
         private Panel dropdownPanel;
         private Label dropdownLabel;
 
-      
+     
 
         protected override void Dispose(bool disposing)
         {
@@ -105,7 +105,7 @@ namespace Garage.Forms.MainForm
 
             // Khởi tạo DashboardControl và thiết lập nó để chiếm toàn bộ diện tích
             //DashboardControl dashboardControl = new DashboardControl(_revenueCalculator, _contextOptions);
-            InventoryControl inven = new InventoryControl(_contextOptions,_transactionInventory);
+            DashboardControl inven = new DashboardControl(_revenueCalculator,_contextOptions);
             // Đảm bảo dashboardControl fill toàn bộ mainContentPanel
             mainContentPanel.Controls.Add(inven);   
            inven.Dock = DockStyle.Fill;
@@ -232,7 +232,7 @@ namespace Garage.Forms.MainForm
                     DisplayControl(new InventoryControl(_contextOptions,_transactionInventory));
                     break;
                 case "Repair Tracker":
-                    DisplayControl(new RepairTrackerControl());
+                    DisplayControl(new RepairTrackerControl(_contextOptions,trackerRepairUtils));
                     break;
                 case "Customers":
                     DisplayControl(new BookingsControl());

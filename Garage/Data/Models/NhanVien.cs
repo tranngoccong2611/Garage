@@ -17,6 +17,8 @@ namespace Garage.Data.Models
         public int? ChucVuID { get; set; }
         public string DiaChi { get; set; }
         public string HinhAnh { get; set; }
+        public DateTime NgayVaoLam { get; set; }
+        public DateTime NgayNghiViec { get; set; }
 
         public virtual GioiTinh GioiTinh { get; set; }
         public virtual ChucVu ChucVu { get; set; }

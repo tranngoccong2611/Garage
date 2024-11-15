@@ -9,35 +9,25 @@ namespace Garage.Forms
 {
     public partial class AddNhanVien : Form
     {
-        private bool isUpdate=false;
+        private bool isUpdate = false;
         private int _existingNhanVienID;
         private GaraOtoDbContext _context;
         private NhanVien user;
         // Constructor nhận các tham số từ DI
-        public AddNhanVien(GaraOtoDbContext  context, int existingNhanVienId=0)
+        public AddNhanVien(GaraOtoDbContext context, int existingNhanVienId = 0)
         {
             InitializeComponent();
             _context = context;
-            this.isUpdate = isUpdate;
-            _existingNhanVienID = existingNhanVienId ;
+            _existingNhanVienID = existingNhanVienId;
 
-            // Cấu hình các ComboBox và các điều khiển khác
-            cmbGioiTinh.Items.Add(new { Text = "Nam", Value = 1 });
-            cmbGioiTinh.Items.Add(new { Text = "Nữ", Value = 2 });
-            cmbGioiTinh.DisplayMember = "Text";
-            cmbGioiTinh.ValueMember = "Value";
-
-            cmbChucVu.Items.Add(new { Text = "Nhân viên", Value = 1 });
-            cmbChucVu.Items.Add(new { Text = "Quản lý", Value = 2 });
-            cmbChucVu.DisplayMember = "Text";
-            cmbChucVu.ValueMember = "Value";
+       
             if (existingNhanVienId != 0)
             {
                 isUpdate = true;
             }
-            if (isUpdate )
+            if (isUpdate)
             {
-                 user = _context.NhanVien.Where(u => u.NhanVienID == existingNhanVienId).FirstOrDefault();
+                user = _context.NhanVien.Where(u => u.NhanVienID == existingNhanVienId).FirstOrDefault();
                 if (user == null)
                 {
                     MessageBox.Show("Không tìm thấy nhân viên cần cập nhật.");
@@ -46,7 +36,6 @@ namespace Garage.Forms
                 // Cập nhật dữ liệu nhân viên nếu là chế độ cập nhật
                 this.Text = "Cập nhật thông tin nhân viên";
                 // Đổ dữ liệu của nhân viên vào các TextBox
-                txtNhanVienID.Text = user.NhanVienID.ToString();
                 txtHoTen.Text = user.HoTen;
                 txtEmail.Text = user.Email;
                 txtSoDienThoai.Text = user.SoDienThoai;
@@ -65,9 +54,6 @@ namespace Garage.Forms
                 {
                     pictureBoxHinhAnh.Image = Properties.Resources.logo; // Ảnh mặc định từ tài nguyên
                 }
-
-                cmbGioiTinh.SelectedIndex = 0; // Chọn giá trị đầu tiên mặc định
-                cmbChucVu.SelectedIndex = 0;   // Chọn giá trị đầu tiên mặc định
 
             }
             else
@@ -210,6 +196,11 @@ namespace Garage.Forms
         private void btnDong_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

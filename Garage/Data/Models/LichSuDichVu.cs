@@ -12,7 +12,6 @@ namespace Garage.Data.Models
         public int? DonBaoDuongID { get; set; }
         public int? NhanVienID { get; set; }
         public int? DichVuID { get; set; }
-        public DateTime? NgayThucHien { get; set; }
         public string GhiChu { get; set; }
 
         public virtual DSDonBaoDuongXe DonBaoDuong { get; set; }

@@ -1,7 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Drawing;
 using Garage.Data;
 using Garage.Data.Models;
-using Garage.Forms.AddForm;
+using Garage.Forms.MainForm.Dictionary;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,11 +13,13 @@ namespace Garage.Forms.MainForm
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly RevenueCalculator _revenueCalculator;
       private readonly TransactionInventory _transactionInventory;
-      
+        private ListBooking _bookings;
+        private ServiceCustomer _customer;
+        private RepairTrackerUtils trackerRepairUtils;
+        private GetStaff _staff;
+        private GetCustomer _getCustomer;
 
-      
-
-        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope, RevenueCalculator revenueCalculator,TransactionInventory inventory)
+        public DashBoard(GaraOtoDbContext context, IServiceScopeFactory scope,GetStaff staff,GetCustomer getCustomer,ServiceCustomer customer, RevenueCalculator revenueCalculator,TransactionInventory inventory,RepairTrackerUtils tracker,ListBooking listbooking)
         {
             _contextOptions = context ?? throw new ArgumentNullException(nameof(context));
             _scopeFactory = scope ?? throw new ArgumentNullException(nameof(scope));
@@ -26,6 +28,11 @@ namespace Garage.Forms.MainForm
             InitializeComponent();
             SetupLayout();
             this.MinimumSize = new Size(800, 600);
+            trackerRepairUtils = tracker;
+            _bookings = listbooking;
+            _customer = customer;
+            _staff = staff;
+            _getCustomer = getCustomer;
       
         }       
         private decimal GetTotalPartsSoldAmount()
@@ -50,14 +57,13 @@ namespace Garage.Forms.MainForm
         //Sửa lại phương thức GetTotalServiceInvoiceAmount
         private decimal GetTotalServiceInvoiceAmount()
         {
-            // Sử dụng _contextOptions thay vì tạo context mới
+   
 
-            var total = _contextOptions.HoaDon
-                .Join(_contextOptions.LichSuDichVu,
-                      h => h.HoaDonID,
-                      lsdv => lsdv.DonBaoDuongID,
-                      (h, lsdv) => new { h.SoTien })
-                .Sum(x => x.SoTien);
+            var total = _contextOptions.LichSuDichVu.Join(_contextOptions.DichVu,
+                      lsdv => lsdv.DichVuID,
+                      dv=>dv.DichVuID,
+                      ( lsdv,dv) => new { dv.Gia })
+                .Sum(x => x.Gia);
 
             return total;
         } 

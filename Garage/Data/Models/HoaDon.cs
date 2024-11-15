@@ -11,7 +11,7 @@ namespace Garage.Data.Models
         public int HoaDonID { get; set; }
         public int? NguoiDungID { get; set; }
         public DateTime? NgayGiaoDich { get; set; }
-        public decimal SoTien { get; set; }
+    
         public string LoaiGiaoDich { get; set; }
         public string GhiChu { get; set; }
 

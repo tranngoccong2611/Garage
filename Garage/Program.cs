@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Garage.Forms;
+using Garage.Forms.MainForm.Dictionary;
+using GaraOto.Common.Utilities.Helper;
 
 static class Program
 {
@@ -58,6 +60,12 @@ static class Program
         services.AddScoped<PasswordHashUpdater>();
         services.AddScoped<TransactionInventory>();
         services.AddScoped<RevenueCalculator>(); // Register RevenueCalculator as well
+        services.AddScoped<ListBooking>();
+        services.AddScoped<GetCustomer>();
+        services.AddScoped<GetStaff>();
+        services.AddScoped<RepairTrackerUtils>();
+        services.AddScoped<ServiceCustomer>();
+        //services.AddScoped<ExcelHelper>();
     }
 
     private static IConfiguration LoadConfiguration()

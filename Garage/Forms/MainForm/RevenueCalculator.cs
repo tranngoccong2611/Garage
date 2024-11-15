@@ -54,8 +54,9 @@ public class RevenueCalculator
     public decimal TinhDoanhThuDichVuTheoThangNam(int year)
     {
 
-        decimal totalRevenue = _contextOptions.LichSuDichVu.Where(lsdv=>lsdv.NgayThucHien.HasValue&&lsdv.NgayThucHien.Value.Year==year)
-        .Join(_contextOptions.DichVu,
+        decimal totalRevenue = _contextOptions.LichSuDichVu.Join(_contextOptions.DSDonBaoDuongXe,ls=>ls.DonBaoDuongID,ds=>ds.DonBaoDuongID,(ls,ds)=>new {ls.DichVuID,ds.NgayBaoDuong})
+        .Where(temp => temp.NgayBaoDuong.Value.Year == year)
+            .Join(_contextOptions.DichVu,
             lsdv => lsdv.DichVuID, // Join condition on `DichVuID`
             dv => dv.DichVuID, // Join condition on `DichVuID`
             (lsdv, dv) => dv) // Select `DichVu` for further processing

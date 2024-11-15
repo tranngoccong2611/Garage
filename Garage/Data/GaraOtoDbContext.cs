@@ -173,7 +173,7 @@ namespace Garage.Data
             modelBuilder.Entity<HoaDon>(entity =>
             {
                 entity.HasKey(e => e.HoaDonID);
-                entity.Property(e => e.SoTien).HasColumnType("decimal(18,2)");
+              
                 entity.Property(e => e.LoaiGiaoDich).HasMaxLength(50);
                 entity.Property(e => e.GhiChu).HasMaxLength(255);
 
@@ -212,7 +212,7 @@ namespace Garage.Data
             modelBuilder.Entity<DatLichBaoDuongXe>(entity =>
             {
                 entity.HasKey(e => e.DatLichBaoDuongID);
-                entity.Property(e => e.TrangThai).HasMaxLength(50).HasDefaultValue("Đang chờ xác nhận");
+                entity.Property(e => e.TrangThai).HasMaxLength(50).HasDefaultValue("Pending");
 
                 entity.HasOne(e => e.NguoiDung)
                       .WithMany()

@@ -35,6 +35,9 @@ namespace Garage.Forms.MainForm
         private DateTimePicker endDate;
         private DataGridView TransactionTables;
         private List<TransactionQuery> AlllistTransactionQUery;
+        private Label PartsContent;
+        private Label StartDate;
+        private Label EndDate;
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -90,7 +93,6 @@ namespace Garage.Forms.MainForm
             Parts.Size = new Size(120, 40);
             Parts.Text = "Parts";
             Parts.Click += Parts_Click;
-
             // Transactions Button
             Transactions.Location = new Point(Parts.Right + 20, 20);
             Transactions.Name = "Transactions";
@@ -104,8 +106,15 @@ namespace Garage.Forms.MainForm
             DateTime start = startDate.Value;
             DateTime end = endDate.Value;
             // ComboBox for List Parts
-            listPartsBox = new ComboBox();
+             PartsContent=new Label();
+            PartsContent.Text = "Parts:";
+        
+        
+            PartsContent.Location= new Point(50, Parts.Bottom + 35);
+            PartsContent.Width = 40;
 
+            listPartsBox = new ComboBox();
+            mainContentParts.Controls.Add(PartsContent);
             lists = _inventory.GetLinhKienList();
             AllList = _inventory.GetLinhKienList();
             listTransactionQUery = _inventory.GetTransactionsByDate(start, end);
@@ -124,8 +133,8 @@ namespace Garage.Forms.MainForm
             listPartsBox.DisplayMember = "TenLinhKien"; // Hiển thị tên linh kiện
             listPartsBox.ValueMember = "LinhKienId";  // Sử dụng LinhKienId làm giá trị
 
-            listPartsBox.Location = new Point(50, Parts.Bottom + 30);
-            listPartsBox.Width = 200;
+            listPartsBox.Location = new Point(PartsContent.Right, Parts.Bottom + 30);
+            listPartsBox.Width = 150;
             listPartsBox.Height = 40;
             listPartsBox.MouseWheel += (sender, e) =>
             {
@@ -162,8 +171,19 @@ namespace Garage.Forms.MainForm
             Add.Size = new Size(120, 40);
             Add.Text = "Add";
             Add.Click += Add_click;
-            startDate.Location = new Point(listPartsBox.Location.X + listPartsBox.Width + 50, listPartsBox.Location.Y);
-            endDate.Location = new Point(startDate.Right + 50, listPartsBox.Location.Y);
+             StartDate= new Label();
+            StartDate.Text = "Start Date:";
+            StartDate.Location = new Point(listPartsBox.Right+30,listPartsBox.Location.Y+5);
+             EndDate = new Label();
+            EndDate.Text = "End Date:";
+           
+            EndDate.Width = 60;
+            StartDate.Width = 70;
+            startDate.Location = new Point(StartDate.Right, listPartsBox.Location.Y);
+            startDate.Width = 100;
+            endDate.Width = 100;
+            EndDate.Location = new Point(startDate.Right + 30, listPartsBox.Location.Y+5);
+            endDate.Location = new Point(EndDate.Right, listPartsBox.Location.Y);
             // Add mainContentParts to InventoryControl
             Controls.Add(mainContentParts);
             Name = "InventoryControl";
@@ -245,7 +265,7 @@ namespace Garage.Forms.MainForm
                 sttColumn.Width = 30; // Adjust width for No column
                 TransactionTables.Columns.Insert(0, sttColumn); // Insert at the first column
             }
-
+            
             // Tạo cột Update Button
             var updateButtonColumn = new DataGridViewButtonColumn
             {
@@ -394,7 +414,9 @@ namespace Garage.Forms.MainForm
                     InitDataGridView(AllList, gridViewparts);
                 InitTransactionParts(listTransactionQUery, TransactionTables);
 
-            
+            mainContentParts.Controls.Add(Parts);
+
+
         }
 
         private void Add_click(object sender, EventArgs e)
@@ -632,30 +654,33 @@ namespace Garage.Forms.MainForm
             mainContentParts.Controls.Add(endDate);
             mainContentParts.Controls.Remove(gridViewparts);
             mainContentParts.Controls.Add(TransactionTables);
-        
+            mainContentParts.Controls.Add(StartDate);
+            mainContentParts.Controls.Add(EndDate);
         }
         private void Parts_Click(object sender, EventArgs e)
         {
+            mainContentParts.Controls.Remove(StartDate);
             mainContentParts.Controls.Remove(startDate);
             mainContentParts.Controls.Remove(endDate);
             mainContentParts.Controls.Add(gridViewparts);
             mainContentParts.Controls.Remove(TransactionTables);
+            mainContentParts.Controls.Remove(EndDate);
         }
         private void InventoryControl_Resize(object sender, EventArgs e)
         {
             // Cập nhật vị trí của TransactionTable để tránh che mất ComboBox
             int offsetFromTop = listPartsBox.Location.Y + listPartsBox.Height + 20; // Khoảng cách từ phía trên form (giả sử khoảng cách này là đủ để không bị che khuất)
-            TransactionTables.Location = new Point(listPartsBox.Location.X, offsetFromTop); // Di chuyển bảng xuống
-            TransactionTables.Width = Add.Location.X + Add.Width - listPartsBox.Location.X; // Đảm bảo chiều rộng của bảng phù hợp với diện tích
+            TransactionTables.Location = new Point(PartsContent.Location.X, offsetFromTop); // Di chuyển bảng xuống
+            TransactionTables.Width = Add.Location.X + Add.Width - PartsContent.Location.X; // Đảm bảo chiều rộng của bảng phù hợp với diện tích
             TransactionTables.Height = mainContentParts.Height - offsetFromTop - 20; // Điều chỉnh chiều cao của bảng
+
           
-         
             TransactionTables.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom;
  
             mainContentParts.Padding = new Padding(0, 0, 0, 30);
             gridViewparts.ColumnHeadersHeight = 40;
-            gridViewparts.Location = new Point(listPartsBox.Location.X, offsetFromTop); // Di chuyển bảng xuống
-            gridViewparts.Width = Add.Location.X + Add.Width - listPartsBox.Location.X; // Đảm bảo chiều rộng của bảng phù hợp với diện tích
+            gridViewparts.Location = new Point(PartsContent.Location.X, offsetFromTop); // Di chuyển bảng xuống
+            gridViewparts.Width = Add.Location.X + Add.Width - PartsContent.Location.X; // Đảm bảo chiều rộng của bảng phù hợp với diện tích
             gridViewparts.Height = mainContentParts.Height - offsetFromTop - 20; // Điều chỉnh chiều cao của bảng
 
           
