@@ -76,3 +76,5 @@ publish/
 # Ignore appsettings
 appsettings.json
 appsettings.*.json
+
+.vs/
