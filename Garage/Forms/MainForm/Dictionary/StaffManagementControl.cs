@@ -17,8 +17,8 @@ namespace Garage.Forms.MainForm.Dictionary
         private GetStaff _getstaffs;
         public StaffManagementControl(GaraOtoDbContext context,GetStaff staffs)
         {
-            _dbContext = context;
-            _getstaffs = staffs;
+            _dbContext =context?? throw new ArgumentNullException(nameof(_dbContext));
+            _getstaffs = staffs ?? new GetStaff(_dbContext); ;
             InitializeComponent();
         }
     }

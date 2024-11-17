@@ -19,8 +19,8 @@ namespace Garage.Forms.MainForm.Dictionary
         public RepairTrackerControl(GaraOtoDbContext context, RepairTrackerUtils trackerUtils)
         {
             // Kiểm tra null
-            _context = context ?? throw new ArgumentNullException(nameof(context));
-            _trackerUtils = trackerUtils ?? throw new ArgumentNullException(nameof(trackerUtils));
+            _context = context ?? throw new ArgumentNullException(nameof(_context));
+            _trackerUtils = trackerUtils ?? new RepairTrackerUtils(_context);
 
             InitializeComponent();
 

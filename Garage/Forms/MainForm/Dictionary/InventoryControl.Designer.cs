@@ -21,7 +21,7 @@ namespace Garage.Forms.MainForm
     partial class InventoryControl
     {
         private System.ComponentModel.IContainer components = null;
-        private TransactionInventory _inventory;
+        
         private RoundedPanel mainContentParts;
         private Button Parts;
         private Button Transactions;

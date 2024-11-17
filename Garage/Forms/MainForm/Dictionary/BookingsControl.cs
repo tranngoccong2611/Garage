@@ -1,4 +1,5 @@
-﻿using Garage.Data;
+﻿using DocumentFormat.OpenXml.InkML;
+using Garage.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +18,8 @@ namespace Garage.Forms.MainForm.Dictionary
         private ListBooking _bookings;
         public BookingsControl(ListBooking bookings,GaraOtoDbContext db)
         {
-            _db = db;
-            _bookings = bookings;
+           _db=db?? throw new ArgumentNullException(nameof(db));
+            _bookings = bookings??new ListBooking(_db);
             InitializeComponent();
           
         }

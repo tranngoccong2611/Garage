@@ -3,28 +3,55 @@
   "WorkspaceRootPath": "D:\\btlWinform\\Garage\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\repairtrackercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\repairtrackercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\repairtrackercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\repairtrackercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\listbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\listbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\staffmanagementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\staffmanagementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\staffmanagementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\staffmanagementcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\customerscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\customerscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\customerscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\customerscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\formaddtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\formaddtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\bookingscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\bookingscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\8dac7f44c260d0f6c651474ea00bf8e8498d820f704674a518ce52970d4cd694\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\bookingscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\bookingscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\inventorycontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\bookingscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\bookingscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\mainform\\dictionary\\bookingscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -41,10 +68,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|D:\\btlWinform\\Garage\\garage\\forms\\mainform\\formaddtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\formaddtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|d:\\btlwinform\\garage\\garage\\forms\\mainform\\dictionary\\listbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8B40EB-84F5-4EE1-B29F-3087C06D3221}|Garage\\Garage.csproj|solutionrelative:garage\\forms\\mainform\\dictionary\\listbooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +77,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,46 +113,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormAddTransaction.cs",
-              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\FormAddTransaction.cs",
-              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\FormAddTransaction.cs",
-              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\FormAddTransaction.cs",
-              "RelativeToolTip": "Garage\\Forms\\MainForm\\FormAddTransaction.cs",
-              "ViewState": "AgIAAB0BAAAAAAAAAAArwDABAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RepairTrackerControl.cs [Design]",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs [Design]",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T18:55:13.032Z",
+              "WhenOpened": "2024-11-17T00:53:48.555Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffManagementControl.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:53:29.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "CustomersControl.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:52:51.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StaffManagementControl.cs [Design]",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs [Design]",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\StaffManagementControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:47:54.2Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepairTrackerControl.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\RepairTrackerControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:47:49.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomersControl.cs [Design]",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs [Design]",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\CustomersControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:47:31.042Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ListBooking.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
+              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAowK0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:51:31.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InventoryControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\8dac7f44c260d0f6c651474ea00bf8e8498d820f704674a518ce52970d4cd694\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\AppData\\Local\\SourceServer\\8dac7f44c260d0f6c651474ea00bf8e8498d820f704674a518ce52970d4cd694\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:31:52.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "InventoryControl.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T18:22:43.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "BookingsControl.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
               "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
               "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T17:50:38.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "BookingsControl.Designer.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.Designer.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.Designer.cs",
@@ -137,12 +246,24 @@
               "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.Designer.cs",
               "ViewState": "AgIAANsAAAAAAAAAAAAowAQBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T07:10:17.196Z",
+              "WhenOpened": "2024-11-16T07:10:17.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "Garage\\Forms\\Login.cs",
+              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\Login.cs",
+              "RelativeToolTip": "Garage\\Forms\\Login.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T00:35:12.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "InventoryControl.cs [Design]",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.cs",
@@ -154,20 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InventoryControl.Designer.cs",
-              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
-              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
-              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
-              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\InventoryControl.Designer.cs",
-              "ViewState": "AgIAAJ8BAAAAAAAAAAAawLoBAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T18:22:59.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "BookingsControl.cs [Design]",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\BookingsControl.cs",
@@ -179,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "FormAddTransaction.cs [Design]",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\FormAddTransaction.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\FormAddTransaction.cs",
@@ -191,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "FormAddTransaction.Designer.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\FormAddTransaction.Designer.cs",
               "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\FormAddTransaction.Designer.cs",
@@ -199,12 +307,11 @@
               "RelativeToolTip": "Garage\\Forms\\MainForm\\FormAddTransaction.Designer.cs",
               "ViewState": "AgIAAAkBAAAAAAAAAAAAAA4BAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:39:11.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T23:39:11.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "HoaDonLinhKien.cs",
               "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Data\\Models\\HoaDonLinhKien.cs",
               "RelativeDocumentMoniker": "Garage\\Data\\Models\\HoaDonLinhKien.cs",
@@ -212,20 +319,7 @@
               "RelativeToolTip": "Garage\\Data\\Models\\HoaDonLinhKien.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T23:51:58.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ListBooking.cs",
-              "DocumentMoniker": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
-              "RelativeDocumentMoniker": "Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
-              "ToolTip": "D:\\btlWinform\\Garage\\Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
-              "RelativeToolTip": "Garage\\Forms\\MainForm\\Dictionary\\ListBooking.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAowK0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T17:51:31.963Z"
+              "WhenOpened": "2024-11-16T23:51:58.768Z"
             }
           ]
         },

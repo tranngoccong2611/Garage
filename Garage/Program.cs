@@ -40,7 +40,7 @@ static class Program
             var login =scope.ServiceProvider.GetRequiredService<Login>();
             // cái này tạo form tên là yournameform
             //Application.Run(yourNameFOrm());
-            Application.Run(dashboard);
+            Application.Run(login);
         }
     }
 
