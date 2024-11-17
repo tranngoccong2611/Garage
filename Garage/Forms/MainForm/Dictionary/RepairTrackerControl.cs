@@ -23,15 +23,8 @@ namespace Garage.Forms.MainForm.Dictionary
             _trackerUtils = trackerUtils ?? throw new ArgumentNullException(nameof(trackerUtils));
 
             InitializeComponent();
-            // Khởi tạo suggestionList nếu chưa có
-            if (suggestionList == null)
-            {
-                suggestionList = new ListBox();
-                // Set các thuộc tính cần thiết
-                suggestionList.Visible = false;
-                // Thêm vào control
-                this.Controls.Add(suggestionList);
-            }
+
+
         }
  
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garage.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace Garage.Forms.MainForm.Dictionary
 {
     public partial class BookingsControl : UserControl
     {
-        public BookingsControl()
+        private GaraOtoDbContext _db;
+        private ListBooking _bookings;
+        public BookingsControl(ListBooking bookings,GaraOtoDbContext db)
         {
+            _db = db;
+            _bookings = bookings;
             InitializeComponent();
+          
         }
+        // Danh sách bảo dưỡng xe, mỗi xe sẽ có một thời gian bảo dưỡng trong tuần
+
     }
+       
 }

@@ -21,6 +21,7 @@ namespace Garage.Forms.MainForm
             _inventory = inventory;
             InitializeComponent();
             
+            
         }
 
       

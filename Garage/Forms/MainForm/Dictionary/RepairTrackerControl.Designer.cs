@@ -1,6 +1,8 @@
 ﻿using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Spreadsheet;
+using Garage.Data;
 using Garage.Data.Models;
+using Garage.Forms.Style;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Drawing.Drawing2D;
 using System.Net.Mime;
@@ -26,7 +28,7 @@ namespace Garage.Forms.MainForm.Dictionary
         private ListBox suggestionList;
         private Panel leftPanel;
         private Panel rightPanel;
-        private Panel Container;
+        private Panel wrap;
         private Panel issuesPanel;
     
         private Panel MainContent;
@@ -138,7 +140,7 @@ namespace Garage.Forms.MainForm.Dictionary
           
             searchContainer.Controls.Add(searchBox);
 
-            Container.Controls.Add(searchPanel);
+            wrap.Controls.Add(searchPanel);
         }
 
         private void SearchBox_TextChanged(object sender, EventArgs e)
@@ -148,9 +150,9 @@ namespace Garage.Forms.MainForm.Dictionary
             {
                 FilterIssues(searchQuery);
             }
-            else if (suggestPanel != null && Container.Controls.Contains(suggestPanel))
+            else if (suggestPanel != null && wrap.Controls.Contains(suggestPanel))
             {
-                Container.Controls.Remove(suggestPanel);
+                wrap.Controls.Remove(suggestPanel);
                 suggestPanel.Dispose();
             }
         }
@@ -159,9 +161,9 @@ namespace Garage.Forms.MainForm.Dictionary
         private void FilterIssues(string searchQuery)
         {
             // Xóa panel gợi ý cũ nếu tồn tại
-            if (suggestPanel != null && Container.Controls.Contains(suggestPanel))
+            if (suggestPanel != null && wrap.Controls.Contains(suggestPanel))
             {
-                Container.Controls.Remove(suggestPanel);
+                wrap.Controls.Remove(suggestPanel);
                 suggestPanel.Dispose();
             }
 
@@ -211,7 +213,7 @@ namespace Garage.Forms.MainForm.Dictionary
             // Điều chỉnh chiều cao của panel gợi ý
             suggestPanel.Height = Math.Min(yPos, MAX_SUGGESTIONS * SUGGESTION_ITEM_HEIGHT);
 
-            Container.Controls.Add(suggestPanel);
+            wrap.Controls.Add(suggestPanel);
             suggestPanel.BringToFront();
         }
         private Panel CreateSuggestionItem(NguoiDung user, int yPosition)
@@ -259,9 +261,9 @@ namespace Garage.Forms.MainForm.Dictionary
             searchBox.Text = $"{selectedUser.HoTen} - {selectedUser.SoDienThoai}";
 
             // Xóa panel gợi ý
-            if (Container.Controls.Contains(suggestPanel))
+            if (wrap.Controls.Contains(suggestPanel))
             {
-                Container.Controls.Remove(suggestPanel);
+                wrap.Controls.Remove(suggestPanel);
                 suggestPanel.Dispose();
             }
 
@@ -350,9 +352,9 @@ namespace Garage.Forms.MainForm.Dictionary
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
-            if (suggestPanel != null && Container.Controls.Contains(suggestPanel))
+            if (suggestPanel != null && wrap.Controls.Contains(suggestPanel))
             {
-                Container.Controls.Remove(suggestPanel);
+                wrap.Controls.Remove(suggestPanel);
                 suggestPanel.Dispose();
             }
         }
@@ -386,6 +388,7 @@ namespace Garage.Forms.MainForm.Dictionary
 
             MainContent.Controls.Add(leftPanel);
             MainContent.Controls.Add(rightPanel);
+            wrap.Controls.Add(MainContent);
         }
 
         private void InitializeLeftPanel(int widthSearchPanel)
@@ -494,6 +497,7 @@ namespace Garage.Forms.MainForm.Dictionary
         }
         private void LoadLeftResolvedIssues(List<IResolveIssue> listsResolve)
         {
+            listsResolve = listsResolve ?? new List<IResolveIssue>();
             int yPosition = 0;
             int tagIndex = 0;
 
@@ -565,7 +569,45 @@ namespace Garage.Forms.MainForm.Dictionary
             };
 
             DoneIssue.FlatAppearance.BorderSize = 0;
-            DoneIssue.Click += (sender, e) => handleDoneIssue();
+
+           DoneIssue.Click += (sender, e) =>
+{
+    if (isFix == false)
+    {
+        if (item?.TheoDoiId != null)
+        {
+            var td = _context.TheoDoiBaoDuong.ToList();
+            foreach (var i in td)
+            {
+                if (i.TheoDoiID != null && i.TheoDoiID == item.TheoDoiId)  // Ensure no nulls
+                {
+                    i.DaGiaiQuyet = true;
+                    i.CachGiaiQuyet = "đập đi làm lại";
+                }
+            }
+            _context.SaveChanges();
+            // Save after updating all
+            listsResolve = _trackerUtils.getRepairTrackerListResolve();
+            listsUnResolve=_trackerUtils.getRepairListUnResolve();
+            contentPanel.Controls.Clear();
+            contentIssue.Controls.Clear();
+            LoadResolvedIssues(listsResolve);
+            LoadLeftResolvedIssues(listsUnResolve);
+      
+            MessageBox.Show(item.TheoDoiId + " " + td.Count());
+        }
+        else
+        {
+            MessageBox.Show("Item or TheoDoiId is null.");
+        }
+    }
+    else
+    {
+        MessageBox.Show("e");
+    }
+};
+
+
 
             if (isFix == false) { itemContainer.Controls.AddRange(new Control[] { title, content, DoneIssue }); }
             else itemContainer.Controls.AddRange(new Control[] { title, content, viewDetails });
@@ -573,9 +615,9 @@ namespace Garage.Forms.MainForm.Dictionary
             return itemContainer;
         }
 
-      
 
-        private void handleDoneIssue() {  }
+
+      
         private void HandleViewDetailsClick(Panel itemContainer, Button viewDetails, string nameStaff, Point note)
         {
             // Check if a label with name "staffLabel" exists already
@@ -746,68 +788,27 @@ namespace Garage.Forms.MainForm.Dictionary
 
         private void InitializeComponent()
         {
-            this.Text = "Vehicle Issue Tracker";
-            this.Dock = DockStyle.Fill;
-            this.MinimumSize = new Size(800, 600);
-
+            wrap = new Panel();
             listsUnResolve = _trackerUtils.getRepairListUnResolve();
-            listsResolve = _trackerUtils.getRepairTrackerListResolve();
+            listsResolve=_trackerUtils.getRepairTrackerListResolve();
 
-            Container = new Panel
-            {
-                Dock = DockStyle.Fill,
-                AutoScroll = false
-            };
+            // 
+            // Container
+            // 
+            wrap.Location = new Point(0, 0);
 
+            wrap.Dock = DockStyle.Fill;
+            // 
+            // RepairTrackerControl
+            // 
+            Controls.Add(wrap);
            
-
             InitSearch(widthSearchPanel);
             InitMain(widthSearchPanel);
 
-            Container.Controls.Add(searchPanel);
-            Container.Controls.Add(MainContent);
-
-            this.Controls.Add(Container);
         }
     }
 
-    public class CustomPanel : Panel
-    {
-        public int BorderRadius { get; set; }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            using (var path = new GraphicsPath())
-            {
-                var rect = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-                path.AddRoundedRectangle(rect, BorderRadius);
-                this.Region = new Region(path);
-                using (var pen = new Pen(Color.FromArgb(230, 230, 230), 1))
-                {
-                    e.Graphics.DrawPath(pen, path);
-                }
-            }
-        }
-    }
-
-    public static class GraphicsExtensions
-    {
-        public static void AddRoundedRectangle(this GraphicsPath path, Rectangle rect, int radius)
-        {
-            int diameter = radius * 2;
-            Size size = new Size(diameter, diameter);
-            Rectangle arc = new Rectangle(rect.Location, size);
-
-            path.AddArc(arc, 180, 90);
-            arc.X = rect.Right - diameter;
-            path.AddArc(arc, 270, 90);
-            arc.Y = rect.Bottom - diameter;
-            path.AddArc(arc, 0, 90);
-            arc.X = rect.Left;
-            path.AddArc(arc, 90, 90);
-
-            path.CloseFigure();
-        }
-    }
+   
 }

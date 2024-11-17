@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garage.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,12 @@ namespace Garage.Forms.MainForm.Dictionary
 {
     public partial class StaffManagementControl : UserControl
     {
-        public StaffManagementControl()
+        private readonly GaraOtoDbContext _dbContext;
+        private GetStaff _getstaffs;
+        public StaffManagementControl(GaraOtoDbContext context,GetStaff staffs)
         {
+            _dbContext = context;
+            _getstaffs = staffs;
             InitializeComponent();
         }
     }

@@ -16,13 +16,18 @@ using System.Threading.Tasks;
     public TransactionInventory(GaraOtoDbContext context) {
         dbContext = context;
     }
-    
-    public List<LinhKien> GetLinhKienList(int? id=null) {
-        bool isGetAll=id.HasValue;
-        var listParts = isGetAll ? dbContext.LinhKien.Where(lk =>lk.LinhKienID==id).ToList():
-        dbContext.LinhKien.ToList();
-        return listParts;
+
+    public List<LinhKien> GetLinhKienList(int id = 0)
+    {
+        if (id !=0)
+        {
+            // Lấy danh sách theo ID nếu ID có giá trị
+            return dbContext.LinhKien.Where(lk => lk.LinhKienID == id).ToList();
+        }
+        // Trả về toàn bộ danh sách nếu ID không có giá trị
+        return dbContext.LinhKien.ToList();
     }
+
 
     public List<TransactionQuery> GetTransactionsByDate(DateTime startDate, DateTime endDate, int? id = null)
     {
@@ -71,13 +76,6 @@ using System.Threading.Tasks;
 
 
 }
-
-
-
-
-
-
-
 public class TransactionQuery
 {
     public int userId;

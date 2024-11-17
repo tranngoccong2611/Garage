@@ -14,7 +14,7 @@ namespace Garage.Data.Models
         public DateTime? NgayBaoDuong { get; set; }
         public TimeSpan? ThoiGianBaoDuong { get; set; }
         public string MucTieuBaoDuong { get; set; }
-        public string TrangThaiXe {get;set;}
+     
         public virtual XeOTo XeOTo { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
 using Garage.Common.Extension;
+using Garage.Data;
 using Garage.Data.Models;
 using System.Windows.Forms;
 using Color = System.Drawing.Color;
@@ -38,6 +39,7 @@ namespace Garage.Forms.MainForm
         private Label PartsContent;
         private Label StartDate;
         private Label EndDate;
+        private Button AddTransaction;
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -51,6 +53,7 @@ namespace Garage.Forms.MainForm
 
         private void InitializeComponent()
         {
+
             startDate = new DateTimePicker();
             endDate = new DateTimePicker();
             startDate.Format = DateTimePickerFormat.Custom;
@@ -74,13 +77,14 @@ namespace Garage.Forms.MainForm
             Transactions = new Button();
             Add = new Button();
             gridViewparts = new DataGridView();
-
+            AddTransaction = new Button();
             // mainContentParts
             mainContentParts.BackColor = Color.White;
             mainContentParts.BorderRadius = 50;
             mainContentParts.Controls.Add(Parts);
             mainContentParts.Controls.Add(Transactions);
             mainContentParts.Controls.Add(Add);
+           
             mainContentParts.Controls.Add(gridViewparts);
             mainContentParts.Dock = DockStyle.Fill;
             mainContentParts.Name = "mainContentParts";
@@ -101,7 +105,7 @@ namespace Garage.Forms.MainForm
             Transactions.Click += Transacstions_CLick;
             // Lấy giá trị của DateTimePicker (giả sử là startDatePicker)
 
-
+           
 
             DateTime start = startDate.Value;
             DateTime end = endDate.Value;
@@ -115,6 +119,7 @@ namespace Garage.Forms.MainForm
 
             listPartsBox = new ComboBox();
             mainContentParts.Controls.Add(PartsContent);
+         
             lists = _inventory.GetLinhKienList();
             AllList = _inventory.GetLinhKienList();
             listTransactionQUery = _inventory.GetTransactionsByDate(start, end);
@@ -162,7 +167,7 @@ namespace Garage.Forms.MainForm
                 gridViewparts.Rows.Clear();
                 TransactionTables.Rows.Clear();
                 InitDataGridView(AllList, gridViewparts);
-                InitTransactionParts(listTransactionQUery, TransactionTables);
+                InitTransactionParts(listTransactionQUery, TransactionTables,false);
             };
             mainContentParts.Controls.Add(listPartsBox);
             Add.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -171,7 +176,9 @@ namespace Garage.Forms.MainForm
             Add.Size = new Size(120, 40);
             Add.Text = "Add";
             Add.Click += Add_click;
-             StartDate= new Label();
+      
+            
+            StartDate = new Label();
             StartDate.Text = "Start Date:";
             StartDate.Location = new Point(listPartsBox.Right+30,listPartsBox.Location.Y+5);
              EndDate = new Label();
@@ -233,20 +240,12 @@ namespace Garage.Forms.MainForm
 
             // Cho phép chọn lại ô nút "Cập Nhật"
 
+           
 
             // Xử lý sự kiện CellClick để chỉ cho phép nhấn vào nút "Cập Nhật"
 
             TransactionTables.RowTemplate.Height = 45;
-            TransactionTables.CellClick += (s, e) =>
-            {
-                // Kiểm tra nếu ô được nhấn là ô "Update" (cột nút Cập Nhật)
-                if (e.ColumnIndex == TransactionTables.Columns["Update"].Index)
-                {
-                    // Xử lý hành động cập nhật ở đây
-
-                    // đợi bạn 5p   
-                };
-            };
+         
                 if (TransactionTables.Columns["HinhAnh"] == null)
             {
                 var imageColumn = new DataGridViewImageColumn();
@@ -266,14 +265,7 @@ namespace Garage.Forms.MainForm
                 TransactionTables.Columns.Insert(0, sttColumn); // Insert at the first column
             }
             
-            // Tạo cột Update Button
-            var updateButtonColumn = new DataGridViewButtonColumn
-            {
-                Name = "Update",
-                HeaderText = "Actions",
-                Text = "Update",
-                UseColumnTextForButtonValue = true,
-            };
+           
 
             // Thêm cột Update Button vào DataGridView
 
@@ -289,7 +281,7 @@ namespace Garage.Forms.MainForm
 
             // Đặt WrapMode cho cột "User" để hiển thị nhiều dòng
             TransactionTables.Columns["User"].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            TransactionTables.Columns.Add(updateButtonColumn);
+           
             // Thiết lập chiều cao tiêu đề của cột
             TransactionTables.ColumnHeadersHeight = 40;
 
@@ -310,6 +302,12 @@ namespace Garage.Forms.MainForm
                     add.Show();
                 }
             };
+            AddTransaction.Location = new Point(endDate.Right+60, listPartsBox.Location.Y-10);
+            AddTransaction.BackColor = Color.WhiteSmoke;
+            AddTransaction.Width = 90;
+            AddTransaction.Height = 40;
+            AddTransaction.Text = "Add";
+            AddTransaction.Click += AddTransaction_Click;
             // alo hiện tại là ảnh bạn đang để chế độ fake ,nó ko có thật nên load ảnh nó báo lỗi , ông trong form tạo hàm kiểm tra nếu nó ko tồn tại thì đặt một cái ảnh mặc định vào là đc
             // giờ tôi làm nốt winform các màn còn lại
             // Ẩn tiêu đề dòng để không hiển thị dấu X 
@@ -412,32 +410,58 @@ namespace Garage.Forms.MainForm
                     gridViewparts.ColumnHeadersHeight = 40;
                     gridViewparts.Columns.Add(updateButtonColumnParts);
                     InitDataGridView(AllList, gridViewparts);
-                InitTransactionParts(listTransactionQUery, TransactionTables);
+                InitTransactionParts(listTransactionQUery, TransactionTables, false);
 
             mainContentParts.Controls.Add(Parts);
+      
 
 
+        }
+
+        private void AddTransaction_Click(object sender, EventArgs e)
+        {
+            FormAddTransaction addtransactions = new FormAddTransaction(_db);
+            DialogResult res= addtransactions.ShowDialog();
+            if (res == DialogResult.OK) { 
+                
+            }
         }
 
         private void Add_click(object sender, EventArgs e)
         {
-            AddNhanVien addStaff = new AddNhanVien(_db);
-            addStaff.Show();
-        }
+            using (AddLinhKien addStaff = new AddLinhKien(_db, 0))
+            {
+                DialogResult res = addStaff.ShowDialog();
+                if (res == DialogResult.OK)
+                {
+                    // Đợi một chút để đảm bảo database đã được cập nhật
 
+                    MessageBox.Show("thành công");
+                    // Refresh lại context và data
+                    gridViewparts.Rows.Clear();
+                    AllList=_inventory.GetLinhKienList();
+                    gridViewparts.Rows.Clear();
+                    MessageBox.Show("Biển số xe đã được sử dụng" + AllList.Count());
+                    gridViewparts.Rows.Clear();
+                    InitDataGridView(AllList, gridViewparts);
+                }
+            }
+        }
+     
+      
         private void EndDate_Changed(object sender, EventArgs e)
         {
             DateTime start = startDate.Value;
             DateTime end = endDate.Value;
             TransactionTables.Rows.Clear();
             listTransactionQUery=_inventory.GetTransactionsByDate(start, end);
-            InitTransactionParts(listTransactionQUery,TransactionTables);
+            InitTransactionParts(listTransactionQUery,TransactionTables, false);
         }
 
 
 
         // Event handler for Mouse Enter (hover effect)
-        private void InitTransactionParts(List<TransactionQuery> listsDetail, DataGridView? gridViewparts)
+        private void InitTransactionParts(List<TransactionQuery> listsDetail, DataGridView? gridViewparts,bool isUpdate)
         {
             int index = 1;
             foreach (var item in listsDetail)
@@ -465,28 +489,14 @@ namespace Garage.Forms.MainForm
                 }
 
                 // Add the row to the DataGridView
-                gridViewparts.Rows.Add(index, partImage, item.ten + "\n" + item.userId, item.tenLinhKien, item.soLuongLinhKien, item.GiaTriHoaDon, item.NgayGiaoDich.Date);
+                gridViewparts.Rows.Add(index, partImage, item.ten + "\n" + item.userId, item.tenLinhKien, item.soLuongLinhKien, item.GiaTriHoaDon,DateOnly.FromDateTime(item.NgayGiaoDich.Date));
                 index++;
             
 
         }
             // Ensure button column moves with the rows when scrolling
             gridViewparts.Refresh();
-            gridViewparts.CellContentClick += (sender, e) =>
-            {
-                if (e.ColumnIndex == gridViewparts.Columns["Update"].Index)
-                {
-                    // Handle Update button click logic here
-                    var part = listsDetail[e.RowIndex]; // Retrieve the part corresponding to the clicked row
-                                                        // Do something with the part, such as opening an update form
-
-                    if (part != null) {
-                        return;
-                    }
-                    AddNhanVien addStaff = new AddNhanVien(_db,part.userId);
-                    addStaff.Show();
-                }
-            };
+           
 
             // Disable sorting on all columns
             foreach (DataGridViewColumn column in gridViewparts.Columns)
@@ -500,30 +510,7 @@ namespace Garage.Forms.MainForm
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Căn giữa số liệu
             }
-            foreach (DataGridViewRow row in gridViewparts.Rows)
             {
-                var buttonCell = row.Cells["Update"] as DataGridViewButtonCell;
-                if (buttonCell != null)
-                {
-                    // Tính toán chiều rộng và chiều cao của nút chiếm 3/4 chiều rộng và chiều cao của ô
-                    int width = gridViewparts.Columns["Update"].Width * 3 / 5; // Adjust width slightly for padding
-                    int height = gridViewparts.RowTemplate.Height * 3 / 5; // Adjust height for better alignment
-
-                    // Tính toán padding để căn giữa nút
-                    int horizontalPadding = (gridViewparts.Columns["Update"].Width - width) / 2;
-                    int verticalPadding = (gridViewparts.RowTemplate.Height - height) / 2;
-
-                    // Căn giữa nút trong cột "Update" với padding tính toán động
-                    buttonCell.Style.Padding = new Padding(horizontalPadding, verticalPadding, horizontalPadding, verticalPadding);
-
-
-                    buttonCell.Style.ForeColor = Color.Black;
-                    buttonCell.Style.SelectionBackColor = Color.AliceBlue;
-                    buttonCell.Style.SelectionForeColor = Color.Black;
-                    buttonCell.Style.Font = new Font("Arial", 10); // Đặt font cho nút
-
-                }
-
             }
 
             //gridViewparts.CellStateChanged += gridViewparts_CellStateChanged;
@@ -547,13 +534,15 @@ namespace Garage.Forms.MainForm
                     }
                 }
             };
-            gridViewparts.Columns["Update"].ReadOnly = false; // Giả sử "Update" là tên của cột nút Cập Nhật}
+           
         }
             private void InitDataGridView(List<LinhKien> listLinhkiens,DataGridView? gridViewparts)
         {
-           
-       
-            int index = 1;
+
+
+
+          
+                int index = 1;
             foreach (var part in lists)
             {
                 // Load the image for the part, handling missing or invalid paths
@@ -598,31 +587,7 @@ namespace Garage.Forms.MainForm
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Căn giữa số liệu
             }
-            foreach (DataGridViewRow row in gridViewparts.Rows)
-            {
-                var buttonCell = row.Cells["Update"] as DataGridViewButtonCell;
-                if (buttonCell != null)
-                {
-                    // Tính toán chiều rộng và chiều cao của nút chiếm 3/4 chiều rộng và chiều cao của ô
-                    int width = gridViewparts.Columns["Update"].Width * 3 / 5; // Adjust width slightly for padding
-                    int height = gridViewparts.RowTemplate.Height * 3 / 5; // Adjust height for better alignment
 
-                    // Tính toán padding để căn giữa nút
-                    int horizontalPadding = (gridViewparts.Columns["Update"].Width - width) / 2;
-                    int verticalPadding = (gridViewparts.RowTemplate.Height - height) / 2;
-
-                    // Căn giữa nút trong cột "Update" với padding tính toán động
-                    buttonCell.Style.Padding = new Padding(horizontalPadding, verticalPadding, horizontalPadding, verticalPadding);
-
-
-                    buttonCell.Style.ForeColor = Color.Black;
-                    buttonCell.Style.SelectionBackColor = Color.AliceBlue;
-                    buttonCell.Style.SelectionForeColor = Color.Black;
-                    buttonCell.Style.Font = new Font("Arial", 10); // Đặt font cho nút
-
-                }
-
-            }
 
             //gridViewparts.CellStateChanged += gridViewparts_CellStateChanged;
             gridViewparts.MouseWheel += (s, args) =>
@@ -645,26 +610,87 @@ namespace Garage.Forms.MainForm
                     }
                 }
             };
+            gridViewparts.CellContentClick += (sender, e) => {
+                
+                    if (e.ColumnIndex != gridViewparts.Columns["Update"]?.Index ||
+                        e.RowIndex < 0 ||
+                        e.RowIndex >= AllList.Count)
+                        return;
+
+                    try
+                    {
+                        var selectedPart = AllList[e.RowIndex];
+                        if (selectedPart == null) return;
+
+                    AddLinhKien addStaffForm = new AddLinhKien(_db, selectedPart.LinhKienID);
+                    DialogResult result = addStaffForm.ShowDialog();
+
+                    // Kiểm tra nếu form đóng với kết quả OK (thành công)
+                    if (result == DialogResult.OK)
+                    {
+
+                        gridViewparts.Rows.Clear();
+                        AllList = _inventory.GetLinhKienList();
+                        InitDataGridView(AllList, gridViewparts);
+
+                    }
+                }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(
+                            $"Có lỗi xảy ra: {ex.Message}",
+                            "Lỗi",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error
+                        );
+                    }
+                
+            };
+
             gridViewparts.Columns["Update"].ReadOnly = false; // Giả sử "Update" là tên của cột nút Cập Nhật
 
         }
+    
+
+
+
+
+
+
+
         private void Transacstions_CLick(object sender, EventArgs e)
         {
+            
+
+            // Set selected index về 0 (vị trí của item "All")
+            listPartsBox.SelectedIndex = 0;
+            mainContentParts.Controls.Remove(Add);
             mainContentParts.Controls.Add(startDate);
             mainContentParts.Controls.Add(endDate);
+            mainContentParts.Controls.Add(AddTransaction);
             mainContentParts.Controls.Remove(gridViewparts);
             mainContentParts.Controls.Add(TransactionTables);
             mainContentParts.Controls.Add(StartDate);
             mainContentParts.Controls.Add(EndDate);
+            DateTime st = new DateTime(2023,1,1);
+            DateTime et=DateTime.Now;
+            listTransactionQUery = _inventory.GetTransactionsByDate(st,et);
+            InitTransactionParts(listTransactionQUery, TransactionTables,false);
         }
         private void Parts_Click(object sender, EventArgs e)
         {
+            listPartsBox.SelectedIndex = 0;
+            mainContentParts.Controls.Remove(AddTransaction);
             mainContentParts.Controls.Remove(StartDate);
             mainContentParts.Controls.Remove(startDate);
             mainContentParts.Controls.Remove(endDate);
             mainContentParts.Controls.Add(gridViewparts);
+            mainContentParts.Controls.Add(Add);
             mainContentParts.Controls.Remove(TransactionTables);
             mainContentParts.Controls.Remove(EndDate);
+            AllList=_inventory.GetLinhKienList();
+            InitDataGridView(AllList,gridViewparts);
+
         }
         private void InventoryControl_Resize(object sender, EventArgs e)
         {

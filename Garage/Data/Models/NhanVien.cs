@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Garage.Data.Models
 {
+    [Table("NhanVien")]
     public class NhanVien
     {
         public int NhanVienID { get; set; }
@@ -17,8 +16,8 @@ namespace Garage.Data.Models
         public int? ChucVuID { get; set; }
         public string DiaChi { get; set; }
         public string HinhAnh { get; set; }
-        public DateTime NgayVaoLam { get; set; }
-        public DateTime NgayNghiViec { get; set; }
+        public DateTime NgayVaoLam { get; set; } = new DateTime(2023, 1, 1);
+        public DateTime? NgayNghi { get; set; }  // Cần thay đổi thành nullable
 
         public virtual GioiTinh GioiTinh { get; set; }
         public virtual ChucVu ChucVu { get; set; }

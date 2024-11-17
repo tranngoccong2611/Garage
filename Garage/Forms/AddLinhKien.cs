@@ -9,55 +9,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Garage.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Garage.Forms
 {
     public partial class AddLinhKien : Form
     {
         private bool isUpdate = false;
-        private int _existingLinhKienID;
+
         private GaraOtoDbContext _context;
         private LinhKien linhKien;
-
+        private int id;
         public AddLinhKien(GaraOtoDbContext context, int existingLinhKienId = 0)
         {
-            InitializeComponent();
             _context = context;
-            _existingLinhKienID = existingLinhKienId;
+            InitializeComponent();
+            id = existingLinhKienId;
 
-            if (existingLinhKienId != 0)
+
+            try
             {
-                isUpdate = true;
-            }
-            if (isUpdate)
-            {
-                linhKien = _context.LinhKien.Where(lk => lk.LinhKienID == existingLinhKienId).FirstOrDefault();
-                if (linhKien == null)
+                if (existingLinhKienId != 0)
                 {
-                    MessageBox.Show("Không tìm thấy linh kiện cần cập nhật.");
-                    return;
+                    isUpdate = true;
                 }
-
-                // Cập nhật dữ liệu linh kiện nếu là chế độ cập nhật
-                this.Text = "Cập nhật thông tin linh kiện";
-
-                // Đổ dữ liệu của linh kiện vào các TextBox
-                txtLinhKienID.Text = linhKien.LinhKienID.ToString();
-                txtTenLinhKien.Text = linhKien.TenLinhKien;
-                txtSoLuong.Text = linhKien.SoLuong.ToString();
-                txtGia.Text = linhKien.Gia.ToString();
-                txtMoTa.Text = linhKien.MoTa;
-
-                if (!string.IsNullOrEmpty(linhKien.HinhAnh))
+                if (isUpdate)
                 {
-                    pictureBoxHinhAnh.Image = Image.FromFile(linhKien.HinhAnh); // Đặt ảnh linh kiện từ đường dẫn
+                    linhKien = _context.LinhKien.Where(lk => lk.LinhKienID == existingLinhKienId).FirstOrDefault();
+                    if (linhKien == null)
+                    {
+                        MessageBox.Show("Không tìm thấy linh kiện cần cập nhật.");
+                        return;
+                    }
+
+                    this.Text = "Cập nhật thông tin linh kiện";
+
+                    // Đổ dữ liệu vào TextBox
+                    txtLinhKienID.Text = linhKien.LinhKienID.ToString();
+                    txtLinhKienID.ReadOnly = true;
+                    txtTenLinhKien.Text = linhKien.TenLinhKien;
+                    txtSoLuong.Text = linhKien.SoLuong.ToString();
+                    txtGia.Text = linhKien.Gia.ToString();
+                    txtMoTa.Text = linhKien.MoTa;
+
+
+                    if (!string.IsNullOrEmpty(linhKien.HinhAnh) && File.Exists(linhKien.HinhAnh))
+                    {
+                        pictureBoxHinhAnh.Image = Image.FromFile(linhKien.HinhAnh);
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(linhKien.HinhAnh) || !File.Exists(linhKien.HinhAnh))
+                        {
+                            pictureBoxHinhAnh.Image = Image.FromFile("D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png"); // Thay bằng ảnh trong Resources
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    this.Text = "Thêm linh kiện mới";
+                    txtLinhKienID.Text = (countParts + 1).ToString();
+                    txtLinhKienID.ReadOnly = true;
                 }
             }
-            else
+            catch (Exception ex)
             {
-                this.Text = "Thêm linh kiện mới";
+                MessageBox.Show($"Lỗi khi khởi tạo form: {ex.Message}");
             }
+            pictureBoxHinhAnh.Image = Image.FromFile("D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png"); // Thay bằng ảnh trong Resources
+
         }
+
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -65,18 +91,25 @@ namespace Garage.Forms
             {
                 if (ValidateForm())
                 {
-                    string hinhAnhPath = pictureBoxHinhAnh.Image != null ? pictureBoxHinhAnh.ImageLocation : "default.jpg";
+                    string hinhAnhPath = pictureBoxHinhAnh.ImageLocation;
+
+                    if (string.IsNullOrEmpty(hinhAnhPath))
+                    {
+                        hinhAnhPath = "D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png";
+                    }
 
                     if (isUpdate)
                     {
-                        linhKien.TenLinhKien = txtTenLinhKien.Text;
-                        linhKien.SoLuong = int.Parse(txtSoLuong.Text);
-                        linhKien.Gia = decimal.Parse(txtGia.Text);
-                        linhKien.MoTa = txtMoTa.Text;
-                        linhKien.HinhAnh = hinhAnhPath;
+                        if (linhKien != null)
+                        {
+                            linhKien.TenLinhKien = txtTenLinhKien.Text;
+                            linhKien.SoLuong = int.Parse(txtSoLuong.Text);
+                            linhKien.Gia = decimal.Parse(txtGia.Text);
+                            linhKien.MoTa = txtMoTa.Text;
+                            linhKien.HinhAnh = hinhAnhPath;
 
-                        _context.SaveChanges();
-                        MessageBox.Show("Cập nhật linh kiện thành công!");
+                            _context.Entry(linhKien).State = EntityState.Modified;
+                        }
                     }
                     else
                     {
@@ -90,11 +123,15 @@ namespace Garage.Forms
                         };
 
                         _context.LinhKien.Add(newLinhKien);
-                        _context.SaveChanges();
-                        MessageBox.Show("Thêm linh kiện mới thành công!");
-                        pictureBoxHinhAnh.Image = Image.FromFile("default.jpg"); // Đường dẫn tới ảnh mặc định
                     }
 
+                    // Đảm bảo changes được lưu vào database
+                    _context.SaveChanges();
+
+                    // Đợi một chút để đảm bảo database đã được cập nhật
+                    Task.Delay(100).Wait();
+
+                    this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
             }
@@ -103,7 +140,6 @@ namespace Garage.Forms
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}");
             }
         }
-
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -114,9 +150,11 @@ namespace Garage.Forms
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     pictureBoxHinhAnh.Image = Image.FromFile(openFileDialog.FileName);
+                    pictureBoxHinhAnh.ImageLocation = openFileDialog.FileName; // Ghi nhớ đường dẫn
                 }
             }
         }
+
         private bool ValidateForm()
         {
             if (string.IsNullOrWhiteSpace(txtTenLinhKien.Text))
@@ -137,13 +175,80 @@ namespace Garage.Forms
                 return false;
             }
 
+            // Sửa phần kiểm tra hình ảnh
+            if (!isUpdate) // Nếu đang thêm mới
+            {
+                if (pictureBoxHinhAnh.Image == null)
+                {
+                    pictureBoxHinhAnh.Image = Image.FromFile("D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png");
+                }
+            }
+            else // Nếu đang cập nhật
+            {
+                if (linhKien != null && (string.IsNullOrEmpty(linhKien.HinhAnh) || !File.Exists(linhKien.HinhAnh)))
+                {
+                    pictureBoxHinhAnh.Image = Image.FromFile("D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png");
+                }
+            }
+
             return true;
         }
 
-        private void btnDong_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
+        private void button4_Click(object sender, EventArgs e)
+
+        {
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn xóa linh kiện này?",
+                "Xác nhận xóa",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tìm linh kiện cần xóa
+                var linhKien = _context.LinhKien.Find(id);
+
+                if (linhKien != null)
+                {
+                    // Xóa linh kiện
+                    _context.LinhKien.Remove(linhKien);
+                    _context.SaveChanges();
+
+                    // Xóa hình ảnh nếu không phải là ảnh mặc định
+                    string defaultImagePath = "D:\\btlWinform\\Garage\\Garage\\Resources\\Icons\\image-removebg-preview.png";
+                    if (!string.IsNullOrEmpty(linhKien.HinhAnh) &&
+                        File.Exists(linhKien.HinhAnh) &&
+                        linhKien.HinhAnh != defaultImagePath)
+                    {
+                        try
+                        {
+                            File.Delete(linhKien.HinhAnh);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Log lỗi xóa file nếu cần
+                            Console.WriteLine($"Không thể xóa file ảnh: {ex.Message}");
+                        }
+                    }
+
+
+
+                    MessageBox.Show("Xóa linh kiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy linh kiện cần xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
     }
-}
+        };
+           
+        
+    
+

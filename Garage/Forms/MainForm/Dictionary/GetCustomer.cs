@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 public class Users
 {
-    public Image ImageUser { get; set; }
+    public string ImageUser { get; set; }
     public string UserName { get; set; }
     public string Mail { get; set; }
     public string Address { get; set; }
     public int numsOrders { get; set; }
     public int totalMoneyUse { get; set; }
+    public string phoneNumber { get; set; } 
 
 }
 namespace Garage.Forms.MainForm.Dictionary
@@ -39,6 +40,13 @@ namespace Garage.Forms.MainForm.Dictionary
             }
 
             return orders;
+        }
+        public List<Users> GetUsers(string phoneNumber)
+        {
+            var lists=GetAllUsers();
+            var users =lists.Where(item=>item.phoneNumber==phoneNumber).ToList();
+         
+            return users;
         }
         public decimal GetTotalMoneyUseServices(int userID) {
             decimal totalMoneyUse=0 ;
@@ -108,5 +116,44 @@ namespace Garage.Forms.MainForm.Dictionary
             decimal totalSpentServices = GetTotalMoneyUseServices(userID);
             return totalSpentServices + totalSpentPart;
         }
+        public List<Users> GetAllUsers()
+        {
+            // Lấy danh sách tất cả người dùng từ database
+            var userList = _dbContext.NguoiDung
+                .Select(u => new
+                {
+                    u.NguoiDungID,
+                    u.HoTen,
+                    u.Email,
+                    u.DiaChi,
+                    u.HinhAnh,
+                    u.SoDienThoai
+                })
+                .ToList();
+
+            // Tạo danh sách thực thể Users
+            List<Users> users = new List<Users>();
+
+            foreach (var user in userList)
+            {
+                int orders = GetOrders(user.NguoiDungID); // Số đơn hàng của người dùng
+                decimal totalMoneyUse = GetTotalSpent(user.NguoiDungID); // Tổng tiền đã chi tiêu
+
+                // Thêm vào danh sách
+                users.Add(new Users
+                {
+                    phoneNumber = user.SoDienThoai.ToString(),
+                    UserName = user.HoTen,
+                    Mail = user.Email,
+                    Address = user.DiaChi,
+                    ImageUser = user.HinhAnh,
+                    numsOrders = orders,
+                    totalMoneyUse = (int)totalMoneyUse // Ép kiểu nếu cần
+                });
+            }
+
+            return users;
+        }
+       
     }
 }

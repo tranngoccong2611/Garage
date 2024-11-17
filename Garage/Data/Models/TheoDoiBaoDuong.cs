@@ -11,8 +11,8 @@ namespace Garage.Data.Models
         public int TheoDoiID { get; set; }
         public int? DonBaoDuongID { get; set; }
         public string VanDe { get; set; }
-        public bool? DaGiaiQuyet { get; set; }
-        public string CachGiaiQuyet { get; set; }
+        public bool DaGiaiQuyet { get; set; }
+        public string? CachGiaiQuyet { get; set; }
 
         public virtual DSDonBaoDuongXe DonBaoDuong { get; set; }
     }

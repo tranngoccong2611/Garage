@@ -235,13 +235,13 @@ namespace Garage.Forms.MainForm
                     DisplayControl(new RepairTrackerControl(_contextOptions,trackerRepairUtils));
                     break;
                 case "Customers":
-                    DisplayControl(new BookingsControl());
+                    DisplayControl(new CustomersControl(_getCustomer,_contextOptions,_bookings));
                     break;
                 case "Bookings":
-                    DisplayControl(new CustomersControl());
+                    DisplayControl(new BookingsControl(_bookings,_contextOptions));
                     break;
                 case "Staff Management":
-                    DisplayControl(new StaffManagementControl());
+                    DisplayControl(new StaffManagementControl(_contextOptions,_staff));
                     break;
                   
                 default:

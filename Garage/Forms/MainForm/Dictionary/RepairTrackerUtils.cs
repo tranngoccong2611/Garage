@@ -22,9 +22,11 @@ public class IUnresolveIssue
     public string HoTenNhanVien { get; set; }
     public string ChucVu { get; set; }
     public int ChucVuId { get;  set; }
+
 }
 public class IResolveIssue : IUnresolveIssue
 {
+
     public string HangXe { get; set; }
     public string MoHinhXe { get; set; }
     public string BienXe { get; set; }
@@ -32,6 +34,7 @@ public class IResolveIssue : IUnresolveIssue
     public string TenUser { get; set; }
     public string DiaChi { get; set; }
     public string Sdt { get; set; }
+    public int TheoDoiId { get; set; }
 }
 
 
@@ -105,7 +108,7 @@ namespace Garage.Forms.MainForm.Dictionary
                     ThoiGianBaoDuong = temp.o.p.tm.t.tmp.ds.ThoiGianBaoDuong ?? new TimeSpan(9, 0, 0),
                     MucTieu = temp.o.p.tm.t.tmp.ds.MucTieuBaoDuong ?? "",
                     VanDe = temp.o.p.tm.t.tmp.td.VanDe,
-                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ?? false,
+                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ,
                     GhiChu = temp.o.p.tm.t.lsdv.GhiChu ?? "",
                     DichVuId = temp.o.p.tm.t.lsdv.DichVuID ?? 1,
                     NhanVienID = temp.o.p.tm.t.lsdv.NhanVienID ?? 1,
@@ -119,6 +122,8 @@ namespace Garage.Forms.MainForm.Dictionary
                     TenUser = temp.u.HoTen,
                     DiaChi = temp.u.DiaChi,
                     Sdt = temp.u.SoDienThoai,
+                  
+                    TheoDoiId=temp.o.p.tm.t.tmp.td.TheoDoiID,
                 })
                 .GroupBy(x => x.DonBaoDuongId) // hoặc nhóm theo các thuộc tính khác
                 .Select(g => g.First()) // Lấy phần tử đầu tiên trong mỗi nhóm
@@ -187,7 +192,7 @@ namespace Garage.Forms.MainForm.Dictionary
                    ThoiGianBaoDuong = temp.o.p.tm.t.tmp.ds.ThoiGianBaoDuong ?? new TimeSpan(9, 0, 0),
                    MucTieu = temp.o.p.tm.t.tmp.ds.MucTieuBaoDuong ?? "",
                    VanDe = temp.o.p.tm.t.tmp.td.VanDe,
-                   TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ?? false,
+                   TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ,
                    GhiChu = temp.o.p.tm.t.lsdv.GhiChu ?? "",
                    DichVuId = temp.o.p.tm.t.lsdv.DichVuID ?? 1,
                    NhanVienID = temp.o.p.tm.t.lsdv.NhanVienID ?? 1,
@@ -201,6 +206,8 @@ namespace Garage.Forms.MainForm.Dictionary
                    TenUser = temp.u.HoTen,
                    DiaChi = temp.u.DiaChi,
                    Sdt = temp.u.SoDienThoai,
+
+                   TheoDoiId = temp.o.p.tm.t.tmp.td.TheoDoiID,
                })
                .GroupBy(x => x.DonBaoDuongId) // hoặc nhóm theo các thuộc tính khác
                .Select(g => g.First()) // Lấy phần tử đầu tiên trong mỗi nhóm
@@ -251,7 +258,7 @@ namespace Garage.Forms.MainForm.Dictionary
                     ThoiGianBaoDuong = temp.o.p.tm.t.tmp.ds.ThoiGianBaoDuong ?? new TimeSpan(9, 0, 0),
                     MucTieu = temp.o.p.tm.t.tmp.ds.MucTieuBaoDuong ?? "",
                     VanDe = temp.o.p.tm.t.tmp.td.VanDe,
-                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ?? false,
+                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ,
                     GhiChu = temp.o.p.tm.t.lsdv.GhiChu ?? "",
                     DichVuId = temp.o.p.tm.t.lsdv.DichVuID ?? 1,
                     NhanVienID = temp.o.p.tm.t.lsdv.NhanVienID ?? 1,
@@ -265,6 +272,8 @@ namespace Garage.Forms.MainForm.Dictionary
                     TenUser = temp.u.HoTen,
                     DiaChi = temp.u.DiaChi,
                     Sdt = temp.u.SoDienThoai,
+
+                    TheoDoiId = temp.o.p.tm.t.tmp.td.TheoDoiID,
                 })
                 .GroupBy(x => x.DonBaoDuongId) // hoặc nhóm theo các thuộc tính khác
                 .Select(g => g.First()) // Lấy phần tử đầu tiên trong mỗi nhóm
@@ -307,7 +316,7 @@ namespace Garage.Forms.MainForm.Dictionary
                     ThoiGianBaoDuong = temp.o.p.tm.t.tmp.ds.ThoiGianBaoDuong ?? new TimeSpan(9, 0, 0),
                     MucTieu = temp.o.p.tm.t.tmp.ds.MucTieuBaoDuong ?? "",
                     VanDe = temp.o.p.tm.t.tmp.td.VanDe,
-                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ?? false,
+                    TrangThaiDaGiaiQuyet = temp.o.p.tm.t.tmp.td.DaGiaiQuyet ,
                     GhiChu = temp.o.p.tm.t.lsdv.GhiChu ?? "",
                     DichVuId = temp.o.p.tm.t.lsdv.DichVuID ?? 1,
                     NhanVienID = temp.o.p.tm.t.lsdv.NhanVienID ?? 1,
@@ -321,6 +330,8 @@ namespace Garage.Forms.MainForm.Dictionary
                     TenUser = temp.u.HoTen,
                     DiaChi = temp.u.DiaChi,
                     Sdt = temp.u.SoDienThoai,
+
+                    TheoDoiId = temp.o.p.tm.t.tmp.td.TheoDoiID,
                 })
                 .GroupBy(x => x.DonBaoDuongId) // hoặc nhóm theo các thuộc tính khác
                 .Select(g => g.First()) // Lấy phần tử đầu tiên trong mỗi nhóm
